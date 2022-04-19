@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.run.layout.display.VisInstanceRunLayoutDisplayController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="file path" />
+            <TextField />
+            <Button mnemonicParsing="false" text="choose" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="file name" />
+            <TextField />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" text="save" />
+   </children>
+</VBox>

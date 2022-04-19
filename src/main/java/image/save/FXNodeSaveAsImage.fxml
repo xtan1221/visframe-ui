@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="image.save.FXNodeSaveAsImageController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="file path" />
+            <TextField fx:id="selectedDirectoryPathStringTextField" editable="false" prefWidth="400.0" />
+            <Button fx:id="chooseDirButton" mnemonicParsing="false" onAction="#chooseDirButtonOnAction" text="choose directory" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="file name" />
+            <TextField fx:id="fileNameTextField" prefWidth="300.0" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="file format" />
+            <ChoiceBox fx:id="fileFormatChoiceBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonOnAction" text="clear" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonOnAction" text="save" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

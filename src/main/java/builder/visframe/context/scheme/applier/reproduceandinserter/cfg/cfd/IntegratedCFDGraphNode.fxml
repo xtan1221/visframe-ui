@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane fx:id="dagNodeRootStackPane" style="-fx-border-color: red; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.applier.reproduceandinserter.cfg.cfd.IntegratedCFDGraphNodeController">
+   <children>
+      <VBox alignment="CENTER">
+         <children>
+            <Label fx:id="dagNodeInforLabel" text="Label" />
+            <Button fx:id="viewNodeDetailsButton" mnemonicParsing="false" onAction="#viewNodeDetailsButtonOnAction" text="view node details" />
+            <HBox fx:id="copyNodesHBox" alignment="CENTER" spacing="10.0" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

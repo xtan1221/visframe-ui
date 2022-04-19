@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.sqlbased.SimpleSQLQueryEvaluatorViewerController">
+   <children>
+      <Label text="SELECT elements" />
+      <VBox fx:id="selectElementExpressionViewersVBox" />
+      <Label text="FROM" />
+      <HBox />
+      <Label text="WHERE clause" />
+      <HBox fx:id="whereConditionExpressionViewerHBox" />
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+   </children>
+</VBox>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fx:id="rootContainerScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vcd.utils.VCDNodeAssignedEntitiesController">
+   <content>
+      <VBox>
+         <children>
+            <VBox>
+               <children>
+                  <Label text="VSComponent" />
+                  <HBox>
+                     <children>
+                        <Label text="precdence index" />
+                        <TextField fx:id="precedenceIndexTextField" editable="false" prefWidth="50.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label text="Metadata" />
+                              <HBox>
+                                 <children>
+                                    <Label text="total #" />
+                                    <TextField fx:id="totalMetadataNumTextField" editable="false" prefWidth="50.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="metadataListView" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label text="Operation" />
+                              <HBox>
+                                 <children>
+                                    <Label text="total #" />
+                                    <TextField fx:id="totalOperationNumTextField" editable="false" prefWidth="50.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="operationListView" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label text="CompositionFunctionGroup" />
+                              <HBox>
+                                 <children>
+                                    <Label text="total #" />
+                                    <TextField fx:id="totalCFGNumTextField" editable="false" prefWidth="50.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="cfgListView" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <HBox spacing="20.0">
+                           <children>
+                              <Label text="CompositionFunction" />
+                              <HBox>
+                                 <children>
+                                    <Label text="total #" />
+                                    <TextField fx:id="totalCFNumTextField" editable="false" prefWidth="50.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <ListView fx:id="cfListView" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

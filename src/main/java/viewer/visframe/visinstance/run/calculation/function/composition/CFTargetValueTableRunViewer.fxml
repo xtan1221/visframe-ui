@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.visinstance.run.calculation.function.composition.CFTargetValueTableRunViewerController">
+   <children>
+      <VBox>
+         <children>
+            <Label text="CompositionFunction(cfid viewer)" />
+            <VBox fx:id="CFIDViewerVBox" />
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <Label text="Run UID" />
+            <TextField fx:id="runUIDTextField" editable="false" />
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <Label text="Assigned value of IndependentFreeInputVariableTypes (viewer)" />
+            <VBox fx:id="independentFreeInputVariableTypesValueMapViewerVBox" />
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="targetNameColumnNameMap" />
+            <GridPane fx:id="targetNameColumnNameMapGridPane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="target name" />
+                  <Label text="column name" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Label text="target value table columns" />
+      <VBox fx:id="targetValueTableColumnVBox" />
+      <Button fx:id="viewTargetValueTableContentButton" mnemonicParsing="false" onAction="#viewTargetValueTableContentButtonOnAction" text="view target value table content" />
+   </children>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.toolpanel.process.fileformat.FileFormatToolPanelController">
+   <children>
+      <Label text="File Format" />
+      <Button fx:id="newFileFormatButton" mnemonicParsing="false" onAction="#newFileFormatButtonOnAction" text="New" />
+      <Button fx:id="viewAllButton" mnemonicParsing="false" onAction="#viewAllButtonOnAction" text="View All" />
+      <Button fx:id="exportButton" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export" />
+   </children>
+</VBox>

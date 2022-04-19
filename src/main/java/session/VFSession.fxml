@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.VFSessionController">
+   <children>
+      <MenuBar VBox.vgrow="ALWAYS">
+        <menus>
+          <Menu mnemonicParsing="false" text="Project">
+            <items>
+              <MenuItem fx:id="openProjectMenuItem" mnemonicParsing="false" onAction="#openProjectMenuItemOnAction" text="Open Project" />
+                  <MenuItem fx:id="closeCurrentProjectMenuItem" mnemonicParsing="false" onAction="#closeCurrentProjectMenuItemOnAction" text="Close Current Project" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+    <TitledPane animated="false" text="ToolBox">
+         <content>
+            <ScrollPane fitToHeight="true" prefViewportHeight="250.0" prefViewportWidth="1198.0" vbarPolicy="NEVER">
+               <content>
+                  <HBox fx:id="processToolHBox" alignment="CENTER_LEFT" fillHeight="false" spacing="20.0" style="-fx-background-color: cyan;">
+                     <children>
+                        <Button fx:id="printProjectButton" mnemonicParsing="false" onAction="#printProjectButtonOnAction" text="debug helper" />
+                     </children>
+                  </HBox>
+               </content>
+            </ScrollPane>
+         </content>
+    </TitledPane>
+      <TabPane fx:id="openedProjectsTabPane" prefHeight="600.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS" />
+      <HBox maxHeight="50.0" minHeight="50.0" prefHeight="50.0" style="-fx-background-color: blue;" />
+   </children>
+</VBox>

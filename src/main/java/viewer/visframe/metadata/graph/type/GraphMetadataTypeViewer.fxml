@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<GridPane fx:id="rootContainerGridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.graph.type.GraphMetadataTypeViewerController">
+   <children>
+      <CheckBox fx:id="containingOnlyDirectedEdgesCheckBox" mnemonicParsing="false" mouseTransparent="true" text="containing only directed edge" />
+      <CheckBox fx:id="containingOnlyUnDirectedEdgesCheckBox" mnemonicParsing="false" mouseTransparent="true" text="containing only undirected edge" GridPane.columnIndex="1" />
+      <CheckBox fx:id="containingSelfLoopsCheckBox" mnemonicParsing="false" mouseTransparent="true" text="containing self loops" GridPane.rowIndex="1" />
+      <CheckBox fx:id="containingParallelEdgesCheckBox" mnemonicParsing="false" mouseTransparent="true" text="containing parallel edges" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <CheckBox fx:id="containingCyclesCheckBox" allowIndeterminate="true" mnemonicParsing="false" mouseTransparent="true" text="containing cycles" GridPane.rowIndex="2" />
+      <CheckBox fx:id="notConnectedCheckBox" allowIndeterminate="true" mnemonicParsing="false" mouseTransparent="true" text="not connected (multiple components)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>

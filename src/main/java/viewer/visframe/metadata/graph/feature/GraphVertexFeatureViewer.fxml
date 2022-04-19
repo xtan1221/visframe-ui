@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.graph.feature.GraphVertexFeatureViewerController">
+   <children>
+      <VBox HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Vertex ID feature name list" />
+            <VBox fx:id="vertexIDFeatureNameVBox" />
+         </children>
+      </VBox>
+      <VBox HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Vertex additional feature name list" />
+            <VBox fx:id="vertexAdditionalIDFeatureNameVBox" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

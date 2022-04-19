@@ -1,0 +1,15 @@
+package session.toolpanel.process.visinstance.run.layoutconfiguration;
+
+import core.pipeline.visinstance.run.layoutconfiguration.VisInstanceRunLayoutConfigurationProcessMainManager;
+import session.VFSessionManager;
+import session.toolpanel.process.AbstractProcessToolPanelManager;
+import visinstance.run.layoutconfiguration.VisInstanceRunLayoutConfiguration;
+
+public class VisInstanceRunLayoutConfigurationToolPanelManager extends AbstractProcessToolPanelManager<VisInstanceRunLayoutConfiguration,VisInstanceRunLayoutConfigurationToolPanelController,VisInstanceRunLayoutConfigurationProcessMainManager>{
+	
+	public VisInstanceRunLayoutConfigurationToolPanelManager(VFSessionManager sessionManager) {
+		super(sessionManager, VisInstanceRunLayoutConfigurationToolPanelController.FXML_FILE_DIR, new VisInstanceRunLayoutConfigurationProcessMainManager());
+		// TODO Auto-generated constructor stub
+	}
+	
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.operation.steps.ASelectTypeAndTemplateStepController">
+   <children>
+      <VBox fx:id="operationTypeSelectionVBox">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Selected Type" />
+                  <TextField fx:id="selectedOperationTypeTextField" editable="false" prefHeight="31.0" prefWidth="313.0" />
+                  <Button fx:id="clearSelectedOperationTypeButton" mnemonicParsing="false" onAction="#clearSelectedOperationTypeButtonOnAction" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <Label text="Template Operation Instance name" />
+            <TextField fx:id="templateOperationInstanceNameTextField" editable="false" />
+            <Button fx:id="chooseTemplateOperationInstanceButton" mnemonicParsing="false" onAction="#chooseTemplateOperationInstanceButtonOnAction" text="choose" />
+            <Button fx:id="clearSelectedTemplateOperationInstanceButton" mnemonicParsing="false" onAction="#clearSelectedTemplateOperationInstanceButtonOnAction" text="Clear" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

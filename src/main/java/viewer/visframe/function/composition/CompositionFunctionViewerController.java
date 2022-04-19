@@ -1,0 +1,151 @@
+package viewer.visframe.function.composition;
+
+import function.composition.CompositionFunction;
+import function.group.CompositionFunctionGroup;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import viewer.AbstractViewerController;
+import viewer.visframe.function.group.CompositionFunctionGroupIDViewer;
+import viewer.visframe.function.target.CFGTargetViewerBase;
+import viewer.visframe.function.target.CFGTargetViewerFactory;
+import viewer.visframe.function.variable.independent.IndependentFreeInputVariableTypeIDViewer;
+
+/**
+ * 
+ * @author tanxu
+ *
+ */
+public class CompositionFunctionViewerController extends AbstractViewerController<CompositionFunction>{
+	public static final String FXML_FILE_DIR_STRING = "/viewer/visframe/function/composition/CompositionFunctionViewer.fxml";
+	
+	static final double H_GAP = 100d;
+	static final double V_GAP = 100d;
+	//////////////////////////////////////////////
+	
+	
+	@Override
+	protected void setup() {
+		/////
+		this.indexIDTextField.setText(Integer.toString(this.getViewer().getValue().getIndexID()));
+		this.notesTextArea.setText(this.getViewer().getValue().getNotes().getNotesString());
+		
+		//////owner CFG
+		CompositionFunctionGroupIDViewer cfgIDViewer = 
+				new CompositionFunctionGroupIDViewer(this.getViewer().getValue().getHostCompositionFunctionGroupID(), this.getViewer().getHostVisframeContext());
+		this.ownerCFGHBox.getChildren().add(cfgIDViewer.getController().getRootContainerPane());
+		
+		/////assigned targets
+		CompositionFunctionGroup ownerCFG = this.getViewer().getHostCompositionFunctionGroup();
+		
+		this.getViewer().getValue().getAssignedTargetNameSet().forEach(targetName->{
+			CFGTargetViewerBase<?,?> targetViewer = 
+					CFGTargetViewerFactory.build(
+							ownerCFG.getTargetNameMap().get(targetName),
+							ownerCFG
+							);
+			
+			this.assignedTargetsVBox.getChildren().add(targetViewer.getController().getRootContainerPane());
+			
+		});
+		
+		/////owned IndependentFreeInputVariableTypes
+		this.getViewer().getValue().getIndependentFreeInputVariableTypeIDMap().forEach((id, type)->{
+			if(type.getOwnerCompositionFunctionID().equals(this.getViewer().getValue().getID())) {
+				IndependentFreeInputVariableTypeIDViewer indieFIVTypeIDViewer = new IndependentFreeInputVariableTypeIDViewer(id, this.getViewer().getHostVisframeContext());
+				this.independentFreeInputVariableTypesVBox.getChildren().add(indieFIVTypeIDViewer.getController().getRootContainerPane());
+			}
+		});
+		
+		/////////////////////////component function tree
+		this.setupComponentFunctionTree();
+	}
+	
+	/////////////////////////////////////////
+	
+	/**
+	 * create ComponentFunctionViewerBase for each ComponentFunction;
+	 * 
+	 * then add the UI to the tree AnchorPane;
+	 * 
+	 * then add connecting curves
+	 */
+	private void setupComponentFunctionTree() {
+		//add the ComponentFunctions to the AnchorPane
+		this.getViewer().getComponentFunctionIndexViewerMap().forEach((indexID, viewer)->{
+			
+			viewer.calculateAndSetLayoutCoordinate();
+			
+			this.getComponentFunctionTreeAnchorPane().getChildren().add(viewer.getController().getRootContainerPane());
+		});
+		
+		//add linking curves to the AnchorPane
+		this.getViewer().buildLinkingCurves(); //calculate the properties of the Curves
+		this.getViewer().getComponentFunctionIndexViewerMap().forEach((indexID, viewer)->{
+			if(viewer.getCurveToPrevious()!=null)
+				this.getComponentFunctionTreeAnchorPane().getChildren().add(viewer.getCurveToPrevious());
+		});
+		
+	}
+	
+	
+	/**
+	 * return the AnchorPane on which the ComponentFunction tree is laid out;
+	 * 
+	 * @return
+	 */
+	public AnchorPane getComponentFunctionTreeAnchorPane() {
+		return this.componentFunctionTreeAnchorPane;
+	}
+	
+	
+	@Override
+	public Parent getRootContainerPane() {
+		return this.rootContainerSplitPane;
+	}
+	
+	/**
+	 * @return the viewer
+	 */
+	@Override
+	public CompositionFunctionViewer getViewer() {
+		return (CompositionFunctionViewer)this.viewer;
+	}
+	
+	///////////////////////////////////
+	@Override
+	public void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@FXML
+	private SplitPane rootContainerSplitPane;
+	@FXML
+	private TextField indexIDTextField;
+	@FXML
+	private TextArea notesTextArea;
+	@FXML
+	private HBox ownerCFGHBox;
+	@FXML
+	private VBox assignedTargetsVBox;
+	@FXML
+	private VBox independentFreeInputVariableTypesVBox;
+	@FXML
+	private Button showInCFDGraphButton;
+	@FXML
+	private AnchorPane componentFunctionTreeAnchorPane;
+
+	// Event Listener on Button[#showInCFDGraphButton].onAction
+	@FXML
+	public void showInCFDGraphButtonOnAction(ActionEvent event) {
+		// TODO Autogenerated
+	}
+}

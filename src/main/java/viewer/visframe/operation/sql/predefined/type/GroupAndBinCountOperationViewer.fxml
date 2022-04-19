@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.sql.predefined.type.GroupAndBinCountOperationViewerController">
+   <children>
+      <GridPane>
+         <children>
+            <Label text="Operation type" />
+            <TextField fx:id="operationTypeTextField" editable="false" GridPane.columnIndex="1" />
+            <Label text="Operation instance name" GridPane.rowIndex="1" />
+            <TextField fx:id="operationInstanceNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+      <Label text="inputRecordDataMetadataID" />
+      <HBox fx:id="inputRecordDataMetadataIDViewerHBox" />
+      <Label text="groupByColumnNameSet" />
+      <VBox fx:id="groupByColumnNameSetVBox" />
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="numericColumnNameToSortAndBin" />
+            <TextField fx:id="numericColumnNameToSortAndBinTextField" editable="false" GridPane.columnIndex="1" />
+            <Label text="numericColumnSortType" GridPane.rowIndex="1" />
+            <TextField fx:id="numericColumnSortTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="binSize" GridPane.rowIndex="2" />
+            <TextField fx:id="binSizeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="binMin" GridPane.rowIndex="3" />
+            <Label text="binMax" GridPane.rowIndex="4" />
+            <TextField fx:id="binMinTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="binMaxTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

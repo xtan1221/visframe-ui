@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="contentVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.rdb.sqltype.SQLDataTypeBuilderEmbeddedUIContentController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="SELECT type" />
+            <ChoiceBox fx:id="sqlDataTypeChoiceBox" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="additionalStringSettingsHBox" layoutX="10.0" layoutY="10.0">
+         <children>
+            <Label text="Max Length" />
+            <TextField fx:id="stringMaxLengthTextField" />
+            <CheckBox fx:id="stringAutoPaddingCheckBox" mnemonicParsing="false" text="auto padding" />
+         </children>
+      </HBox>
+      <HBox fx:id="additionaIntegerSettingsHBox" layoutX="10.0" layoutY="41.0">
+         <children>
+            <Label text="SELECT Integer type" />
+            <ChoiceBox fx:id="integerTypeChoiceBox" prefWidth="150.0" />
+            <Label fx:id="integerTypeDescriptionLabel" text="description" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

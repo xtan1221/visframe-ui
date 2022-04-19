@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="containerVBox" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.builder.ui.embedded.container.EmbeddedUIRootContainerNodeController">
+   <children>
+      <Label fx:id="nodeNameLabel" text="Name" />
+      <HBox fx:id="controlHBox">
+         <children>
+            <CheckBox fx:id="setToNullCheckBox" mnemonicParsing="false" text="set to null" />
+            <Button fx:id="setToEmptyButton" mnemonicParsing="false" onAction="#setToEmptyButtonOnAction" text="reset to Empty" />
+         </children>
+      </HBox>
+      <Button fx:id="printCurrentStatusButton" mnemonicParsing="false" onAction="#printCurrentStatusButtonOnAction" style="-fx-background-color: red;" text="print current status" />
+      <HBox fx:id="contentHBox" style="-fx-background-color: cyan;" />
+      <VBox fx:id="contentVBox" />
+   </children>
+</VBox>

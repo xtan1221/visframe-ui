@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.group.IndependentGraphicsPropertyCFGViewerController">
+   <children>
+      <HBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="name" />
+                  <TextField fx:id="nameTextField" editable="false" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="type" />
+                  <TextField fx:id="typeTextField" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <Label text="notes" />
+            <TextArea fx:id="notesTextArea" editable="false" prefHeight="79.0" prefWidth="600.0" />
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="owner record Metadata" />
+            <HBox fx:id="ownerRecordMetadataIDViewerHBox" style="-fx-background-color: red;" />
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="targets" />
+            <VBox fx:id="targetsViewerVBox" style="-fx-background-color: green;" />
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="CompositionFunctions" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="index ID" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

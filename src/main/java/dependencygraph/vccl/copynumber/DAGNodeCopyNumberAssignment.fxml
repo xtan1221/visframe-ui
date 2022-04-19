@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vccl.copynumber.DAGNodeCopyNumberAssignmentController">
+   <children>
+      <HBox fx:id="controlButtonHBox">
+         <children>
+            <Button fx:id="clearAllButton" mnemonicParsing="false" onAction="#clearAllButtonOnAction" text="clearAll" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="cancel" />
+            <Button fx:id="finishButton" mnemonicParsing="false" onAction="#finishButtonOnAction" text="finish" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="800.0" prefViewportHeight="800.0" prefViewportWidth="1200.0" prefWidth="800.0">
+               <content>
+                  <AnchorPane fx:id="layoutAnchorPane" prefHeight="802.0" prefWidth="1095.0" />
+               </content>
+            </ScrollPane>
+            <VBox>
+               <children>
+                  <Label text="copy notes asisgnment" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportWidth="153.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="nodeNotesAssignmentVBox" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

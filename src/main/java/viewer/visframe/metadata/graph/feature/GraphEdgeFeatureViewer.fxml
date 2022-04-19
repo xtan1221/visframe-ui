@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.graph.feature.GraphEdgeFeatureViewerController">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Edge ID feature name list" />
+                  <VBox fx:id="edgeIDFeatureNameVBox" />
+               </children>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Edge additional feature name list" />
+                  <VBox fx:id="edgeAdditionalIDFeatureNameVBox" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <CheckBox fx:id="edgeIDColumnSetDisjointWithSourceAndSinkNodeIDColumnSetsCheckBox" mnemonicParsing="false" mouseTransparent="true" text="edgeIDColumnSetDisjointWithSourceAndSinkNodeIDColumnSets" />
+      <VBox>
+         <children>
+            <Label text="Edge source and sink node ID features" />
+            <GridPane fx:id="nodeIDColumnEdgeSourceSinkIDColumnNameMapGridPane" gridLinesVisible="true" hgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="nodeIDColumnName" />
+                  <Label text="EdgeSourceNodeIDColumnName" GridPane.columnIndex="1" />
+                  <Label text="EdgeSinkNodeIDColumnName" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

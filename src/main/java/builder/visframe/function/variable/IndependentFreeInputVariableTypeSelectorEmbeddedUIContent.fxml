@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.variable.IndependentFreeInputVariableTypeSelectorEmbeddedUIContentController">
+   <children>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Label />
+            <Button fx:id="chooseButton" mnemonicParsing="false" onAction="#chooseButtonOnAction" text="choose..." />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonOnAction" text="clear" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="CompositionFunctionGroupName" />
+            <TextField fx:id="compositionFunctionGroupNameTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="CompositionFunctionIndexID" />
+            <TextField fx:id="ownerCompositionFunctionIndexIDTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="IndependentFreeInputVariableType name" />
+            <TextField fx:id="indieFIVTypeNameTextField" editable="false" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

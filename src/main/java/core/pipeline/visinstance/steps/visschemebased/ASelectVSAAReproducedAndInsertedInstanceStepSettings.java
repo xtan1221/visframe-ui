@@ -1,0 +1,21 @@
+package core.pipeline.visinstance.steps.visschemebased;
+
+import context.scheme.appliedarchive.reproducedandinsertedinstance.VisSchemeAppliedArchiveReproducedAndInsertedInstance;
+import core.pipeline.ProcessStepSettings;
+
+public class ASelectVSAAReproducedAndInsertedInstanceStepSettings implements ProcessStepSettings {
+	private VisSchemeAppliedArchiveReproducedAndInsertedInstance selectedVSAAReproducedAndInsertedInstance;
+	
+	ASelectVSAAReproducedAndInsertedInstanceStepSettings(VisSchemeAppliedArchiveReproducedAndInsertedInstance selectedVSAAReproducedAndInsertedInstance){
+		this.selectedVSAAReproducedAndInsertedInstance = selectedVSAAReproducedAndInsertedInstance;
+	}
+	
+	public VisSchemeAppliedArchiveReproducedAndInsertedInstance getSelectedVSAAReproducedAndInsertedInstance() {
+		return selectedVSAAReproducedAndInsertedInstance;
+	}
+	
+	public void setSelectedVSAAReproducedAndInsertedInstance(VisSchemeAppliedArchiveReproducedAndInsertedInstance selectedVSAAReproducedAndInsertedInstance) {
+		this.selectedVSAAReproducedAndInsertedInstance = selectedVSAAReproducedAndInsertedInstance;
+	}
+
+}

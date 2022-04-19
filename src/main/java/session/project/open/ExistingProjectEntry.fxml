@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.project.open.ExistingProjectEntryController">
+   <children>
+      <RadioButton fx:id="selectRadioButton" mnemonicParsing="false" />
+      <Label text="Name" />
+      <TextField fx:id="projectNameTextField" editable="false" prefWidth="150.0" />
+      <Label text="Location" />
+      <TextField fx:id="projectLocationTextField" editable="false" prefWidth="300.0" />
+   </children>
+   <padding>
+      <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+   </padding>
+</HBox>

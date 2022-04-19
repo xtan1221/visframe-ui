@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Mon Apr 18 20:52:12 CDT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0180-3f85-27bf-00000d5ab898 
+on database directory C:\visframeUI-test\project_418\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@78636a05 
+Loaded from file:/C:/Users/tanxu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=10.0.2+13
+user.dir=C:\Users\tanxu\eclipse-workspace\visframeUI_418_before_github
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Apr 18 20:52:23 CDT 2022:
+Shutting down instance a816c00e-0180-3f85-27bf-00000d5ab898 on database directory C:\visframeUI-test\project_418\db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@78636a05 

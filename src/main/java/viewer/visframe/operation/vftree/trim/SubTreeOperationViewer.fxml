@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.vftree.trim.SubTreeOperationViewerController">
+   <children>
+      <GridPane>
+         <children>
+            <Label text="Operation type" />
+            <TextField fx:id="operationTypeTextField" editable="false" GridPane.columnIndex="1" />
+            <Label text="Operation instance name" GridPane.rowIndex="1" />
+            <TextField fx:id="operationInstanceNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+      <Label text="inputVfTreeMetadataID" />
+      <HBox fx:id="inputVfTreeMetadataIDViewerHBox" />
+      <GridPane fx:id="nodeNonMandatoryAdditionalFeatureToBeKeptGridPane">
+         <children>
+            <Label text="node non-mandatory additional feature to be kept" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="edgeNonMandatoryAdditionalFeatureToBeKeptGridPane">
+         <children>
+            <Label text="edge non-mandatory additional feature to be kept" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label text="newRootPositionOnTree" />
+      <HBox fx:id="newRootPositionOnTreeViewerHBox" />
+   </children>
+</VBox>

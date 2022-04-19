@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="containerVBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.builder.ui.integrative.NonLeafNodeBuilderIntegrativeUIController">
+   <children>
+      <HBox spacing="40.0">
+         <children>
+            <Label fx:id="nodeNameLabel" text="nodeNameLabel" />
+            <Label fx:id="nodeDescriptionLabel" text="nodeDescriptionLabel" />
+         </children>
+      </HBox>
+      <ScrollPane fx:id="childrenEmbeddedRootContainerNodeScrollPane" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox fx:id="childrenEmbeddedNodeVBox" spacing="20.0" />
+         </content>
+      </ScrollPane>
+      <HBox fx:id="operationButtonContainerHBox">
+         <children>
+            <Button fx:id="finishButton" mnemonicParsing="false" onAction="#finishButtonOnAction" text="Finish" />
+            <Button fx:id="setToDefaultEmptyButton" mnemonicParsing="false" onAction="#setToDefaultEmptyButtonOnAction" text="set To Default emtpy" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

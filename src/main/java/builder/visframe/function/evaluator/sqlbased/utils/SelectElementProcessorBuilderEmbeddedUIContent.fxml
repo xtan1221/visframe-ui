@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.evaluator.sqlbased.utils.SelectElementProcessorBuilderEmbeddedUIContentController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="select element string" />
+            <TextField fx:id="stringValueTextField" prefWidth="300.0" />
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <Label text="Detected Variables" />
+            <FlowPane fx:id="detectedVariablesFlowPane" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

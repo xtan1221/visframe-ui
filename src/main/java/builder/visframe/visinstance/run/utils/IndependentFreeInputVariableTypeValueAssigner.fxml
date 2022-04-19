@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<GridPane fx:id="rootContainerGridPane" hgap="10.0" style="-fx-border-color: red;" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.run.utils.IndependentFreeInputVariableTypeValueAssignerController">
+  <columnConstraints>
+    <ColumnConstraints />
+    <ColumnConstraints hgrow="SOMETIMES" prefWidth="200.0" />
+      <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="owner CompositionFunction" GridPane.rowIndex="1" />
+      <TextField fx:id="ownerCompositionFunctionTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="notes" GridPane.rowIndex="3" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="30.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="name" />
+      <TextField fx:id="nameTextField" editable="false" GridPane.columnIndex="1" />
+      <Label text="sql data type" GridPane.rowIndex="2" />
+      <TextField fx:id="sqlDataTypeTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="viewOwnerCompositionFunctionDetailButton" mnemonicParsing="false" onAction="#viewOwnerCompositionFunctionDetailButtonOnAction" text="view details" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="viewNotesButton" mnemonicParsing="false" onAction="#viewNotesButtonOnAction" text="view details" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Label text="value" GridPane.rowIndex="4" />
+      <TextField fx:id="valueStringTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>

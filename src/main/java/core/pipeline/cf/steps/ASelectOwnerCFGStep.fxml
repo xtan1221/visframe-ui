@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.cf.steps.ASelectOwnerCFGStepController">
+   <children>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Owner CompositionFunctionGroup name" />
+                  <TextField fx:id="ownerCFGNameTextField" editable="false" />
+                  <Button fx:id="viewDetailButton" mnemonicParsing="false" onAction="#viewDetailButtonOnAction" text="view Detail" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="chooseOwnerCFGButton" mnemonicParsing="false" onAction="#chooseOwnerCFGButtonOnAction" text="choose" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

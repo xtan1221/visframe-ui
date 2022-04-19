@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.nativevi.utils.CoreShapeCFGController">
+   <children>
+      <VBox VBox.vgrow="NEVER">
+         <children>
+            <HBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="group name" />
+                        <TextField fx:id="cfgNameTextField" editable="false" prefHeight="31.0" prefWidth="245.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="owner record data name" />
+                        <TextField fx:id="ownerRecordDataNameTextField" editable="false" prefHeight="31.0" prefWidth="243.0" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="viewCFGDetailButton" mnemonicParsing="false" onAction="#viewCFGDetailButtonOnAction" text="view detail" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" VBox.vgrow="NEVER">
+               <children>
+                  <Button fx:id="removeCFGButton" mnemonicParsing="false" onAction="#removeCFGButtonOnAction" text="remove" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TitledPane fx:id="compositionFunctionSelectionTitledPane" animated="false" text="CompositionFunction selection (selected # = 0)">
+         <content>
+            <VBox spacing="20.0">
+               <children>
+                  <HBox fx:id="compositionFunctionSelectionControlHBox" alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="selectAllCompositionFunctionButton" mnemonicParsing="false" onAction="#selectAllCompositionFunctionButtonOnAction" text="select all" />
+                        <Button fx:id="deSelectAllCompositionFunctionButton" mnemonicParsing="false" onAction="#deSelectAllCompositionFunctionButtonOnAction" text="de-select all" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="compositionFunctionContainerVBox" spacing="5.0" style="-fx-background-color: green;">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></VBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

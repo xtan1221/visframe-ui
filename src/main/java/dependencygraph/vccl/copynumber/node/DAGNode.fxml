@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane fx:id="nodeRootStackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vccl.copynumber.node.DAGNodeController">
+   <children>
+      <Circle fill="DODGERBLUE" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+      <VBox alignment="CENTER">
+         <children>
+            <Label fx:id="inforLabel" />
+            <Button fx:id="viewNodeDetailsButton" mnemonicParsing="false" onAction="#viewNodeDetailsButtonOnAction" text="view details" />
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="copy number" />
+                  <HBox alignment="CENTER">
+                     <children>
+                        <TextField fx:id="copyNumberTextField" editable="false" prefWidth="50.0" />
+                        <HBox fx:id="copyNumberAssignmentControllHBox" alignment="CENTER">
+                           <children>
+                              <Button fx:id="increaseByOneButton" mnemonicParsing="false" onAction="#increaseByOneButtonOnAction" text="+" />
+                              <Button fx:id="decreaseByOneButton" mnemonicParsing="false" onAction="#decreaseByOneButtonOnAction" text="-" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

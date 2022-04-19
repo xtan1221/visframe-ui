@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.visinstance.run.steps.ASelectVisInstanceStepController">
+   <children>
+      <HBox fx:id="selectedItemHBox">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="VisInstance UID" />
+                  <TextField fx:id="visInstanceUIDTextField" editable="false" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="name" />
+                  <TextField fx:id="visInstanceNameTextField" editable="false" />
+               </children>
+            </HBox>
+            <Button fx:id="viewVisInstanceDetailButton" mnemonicParsing="false" onAction="#viewVisInstanceDetailButtonOnAction" text="view detail" />
+            <Region prefHeight="31.0" prefWidth="182.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="browseButton" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse..." />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,16 @@
+package session.toolpanel.process.visscheme.appliedarchive.reproducedandinsertedinstance;
+
+import context.scheme.appliedarchive.reproducedandinsertedinstance.VisSchemeAppliedArchiveReproducedAndInsertedInstance;
+import core.pipeline.visscheme.appliedarchive.reproducedandinsertedinstance.VisSchemeAppliedArchiveReproducedAndInsertedInstanceProcessMainManager;
+import session.VFSessionManager;
+import session.toolpanel.process.AbstractProcessToolPanelManager;
+
+public class VisSchemeAppliedArchiveReproducedAndInsertedInstanceToolPanelManager 
+	extends AbstractProcessToolPanelManager<VisSchemeAppliedArchiveReproducedAndInsertedInstance, VisSchemeAppliedArchiveReproducedAndInsertedInstanceToolPanelController, VisSchemeAppliedArchiveReproducedAndInsertedInstanceProcessMainManager>{
+	
+	public VisSchemeAppliedArchiveReproducedAndInsertedInstanceToolPanelManager(VFSessionManager sessionManager) {
+		super(sessionManager, VisSchemeAppliedArchiveReproducedAndInsertedInstanceToolPanelController.FXML_FILE_DIR, new VisSchemeAppliedArchiveReproducedAndInsertedInstanceProcessMainManager());
+		// TODO Auto-generated constructor stub
+	}
+	
+}

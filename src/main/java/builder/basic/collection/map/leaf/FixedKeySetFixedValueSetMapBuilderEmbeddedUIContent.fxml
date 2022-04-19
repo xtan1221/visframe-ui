@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.basic.collection.map.leaf.FixedKeySetFixedValueSetMapBuilderEmbeddedUIContentController">
+   <children>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefViewportHeight="235.0" prefViewportWidth="541.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+         <content>
+            <AnchorPane fx:id="anchorPane">
+               <children>
+                  <VBox fx:id="mapKeyContainerVBox" layoutX="100.0" layoutY="100.0" spacing="20.0">
+                     <children>
+                        <Label text="map keys" />
+                        <GridPane fx:id="mapKeyGridPane" style="-fx-background-color: red;" vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="mapValueContainerVBox" layoutX="400.0" layoutY="100.0" spacing="20.0">
+                     <children>
+                        <Label text="map values" />
+                        <GridPane fx:id="mapValueGridPane" style="-fx-background-color: red;" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints />
+                              <ColumnConstraints hgrow="SOMETIMES" />
+                           </columnConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <Button fx:id="clearAllLinksButton" layoutX="245.0" layoutY="53.0" mnemonicParsing="false" onAction="#clearAllLinksButtonOnAction" text="clear all" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

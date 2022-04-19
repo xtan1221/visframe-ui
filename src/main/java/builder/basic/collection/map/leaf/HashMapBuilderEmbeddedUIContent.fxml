@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="contentVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.builder.leaf.utils.collection.map.MapFeatureEmbeddedController">
+   <children>
+      <HBox fx:id="operationButtonHBox">
+         <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonOnAction" text="Add" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonOnAction" text="Delete" />
+            <Button fx:id="selectAllButton" mnemonicParsing="false" onAction="#selectAllButtonOnAction" text="Select All" />
+            <Button fx:id="deSelectAllButton" mnemonicParsing="false" onAction="#deSelectAllButtonOnAction" text="De-Select All" />
+            <Button fx:id="checkButton" mnemonicParsing="false" onAction="#checkButtonOnAction" text="Check" />
+         </children>
+      </HBox>
+      <ScrollPane fx:id="entryScrollPane" maxHeight="400.0" prefViewportHeight="235.0" prefViewportWidth="541.0">
+         <content>
+            <VBox fx:id="entryVBox" />
+         </content>
+      </ScrollPane>
+      <HBox>
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonOnAction" text="Save" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="Cancel changes since last time saved" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

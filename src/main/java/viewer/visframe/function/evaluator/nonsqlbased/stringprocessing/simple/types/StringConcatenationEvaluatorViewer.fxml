@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.nonsqlbased.stringprocessing.simple.types.StringConcatenationEvaluatorViewerController">
+   <children>
+      <Label text="concatenatedInputVariableList" />
+      <VBox fx:id="concatenatedInputVariableViewerListVBox" />
+      <Label text="concatenatingStringInputVariable" />
+      <HBox fx:id="concatenatingStringInputVariableViewerHBox" />
+      <HBox>
+         <children>
+            <Label text="defaultConcatenatingString" />
+            <TextField fx:id="defaultConcatenatingStringViewerTextField" editable="false" />
+         </children>
+      </HBox>
+      <Label text="outputVariable" />
+      <HBox fx:id="outputVariableViewerHBox" />
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+   </children>
+</VBox>

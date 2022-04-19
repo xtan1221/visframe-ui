@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.component.SimpleFunctionViewerController">
+   <children>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <StackPane>
+               <children>
+                  <Circle fx:id="prevoiusCompnentFunctionCircle" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label alignment="CENTER" text="previous" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <TitledPane animated="false" expanded="false" text="targets">
+               <content>
+                  <VBox fx:id="assignedTargetsVBox" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="evaluators">
+               <content>
+                  <GridPane fx:id="evaluatorGridPane" style="-fx-background-color: cyan;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="index" />
+                        <Label text="basic infor" GridPane.columnIndex="1" />
+                        <Label text="detail infor" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER">
+         <children>
+            <StackPane>
+               <children>
+                  <Circle fx:id="gotoNextComponentFunctionCircle" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Label alignment="CENTER" text="goto" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</HBox>

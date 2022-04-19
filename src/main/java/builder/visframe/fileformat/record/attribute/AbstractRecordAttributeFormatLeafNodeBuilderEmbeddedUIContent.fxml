@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="contentVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.fileformat.record.attribute.AbstractRecordAttributeFormatLeafNodeBuilderEmbeddedUIContentController">
+   <children>
+      <HBox fx:id="operationHBox">
+         <children>
+            <Label text="type" />
+            <ChoiceBox fx:id="attributeTypeChoiceBox" prefWidth="150.0" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonOnAction" style="-fx-background-color: red;" text="Save" />
+         </children>
+      </HBox>
+      <HBox fx:id="attributeHBox" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

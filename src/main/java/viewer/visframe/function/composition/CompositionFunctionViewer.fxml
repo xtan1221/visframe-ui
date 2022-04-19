@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="rootContainerSplitPane" dividerPositions="0.25" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.composition.CompositionFunctionViewerController">
+   <items>
+      <ScrollPane prefViewportHeight="798.0" prefViewportWidth="296.0">
+         <content>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="index ID" />
+                        <TextField fx:id="indexIDTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <Label text="notes" />
+                        <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" VBox.vgrow="NEVER" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="owner CFG" />
+                        <HBox fx:id="ownerCFGHBox" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="assigned targets" />
+                        <VBox fx:id="assignedTargetsVBox" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="IndependentFreeInputVariableTypes" />
+                        <VBox fx:id="independentFreeInputVariableTypesVBox" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="showInCFDGraphButton" mnemonicParsing="false" onAction="#showInCFDGraphButtonOnAction" text="show in CFD graph" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="798.0" prefViewportWidth="894.0">
+         <content>
+            <AnchorPane fx:id="componentFunctionTreeAnchorPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: cyan;" />
+         </content>
+      </ScrollPane>
+   </items>
+</SplitPane>

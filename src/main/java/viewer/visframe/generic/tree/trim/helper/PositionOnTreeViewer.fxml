@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<GridPane fx:id="rootContainerGridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.generic.tree.trim.helper.PositionOnTreeViewerController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="childNodeID" />
+      <TextField fx:id="childNodeIDTextField" editable="false" prefWidth="100.0" GridPane.columnIndex="1" />
+      <Label text="parentNodeID" GridPane.rowIndex="1" />
+      <TextField fx:id="parentNodeIDTextField" editable="false" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="position" GridPane.rowIndex="2" />
+      <CheckBox fx:id="onRootNodeCheckBox" mnemonicParsing="false" text="onRootNode" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="positionTextField" editable="false" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+</GridPane>

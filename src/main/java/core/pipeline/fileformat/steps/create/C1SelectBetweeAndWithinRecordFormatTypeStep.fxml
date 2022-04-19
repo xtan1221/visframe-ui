@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.fileformat.steps.create.C1SelectBetweeAndWithinRecordFormatTypeStepController">
+   <children>
+      <HBox layoutX="91.0" layoutY="138.0">
+         <children>
+            <Label layoutX="91.0" layoutY="143.0" text="Between record format Type:" />
+            <ChoiceBox fx:id="betweenRecordFormatTypeChoiceBox" layoutX="336.0" layoutY="138.0" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="91.0" layoutY="195.0">
+         <children>
+            <Label layoutX="91.0" layoutY="200.0" text="Within record format Type:" />
+            <ChoiceBox fx:id="withinRecordFormatTypeChoiceBox" layoutX="336.0" layoutY="195.0" prefWidth="150.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

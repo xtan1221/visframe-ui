@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.visinstance.steps.SelectTypeStepController">
+   <children>
+      <RadioButton fx:id="nativeVisInstanceRadioButton" layoutX="126.0" layoutY="200.0" mnemonicParsing="false" text="native VisInstance" />
+      <RadioButton fx:id="visSchemeBasedVisInstanceRadioButton" layoutX="126.0" layoutY="230.0" mnemonicParsing="false" text="VisScheme based" />
+   </children>
+</VBox>

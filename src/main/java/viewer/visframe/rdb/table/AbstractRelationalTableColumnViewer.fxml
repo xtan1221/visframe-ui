@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.rdb.table.AbstractRelationalTableColumnViewerController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="index" />
+            <TextField fx:id="indexTextField" editable="false" prefWidth="50.0" />
+            <Label text="name" />
+            <TextField fx:id="nameTextField" editable="false" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox GridPane.columnIndex="4">
+         <children>
+            <Label text="data type" />
+            <TextField fx:id="dataTypeTextField" editable="false" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <CheckBox fx:id="inPrimaryKeyCheckBox" mnemonicParsing="false" mouseTransparent="true" text="in Primary key" GridPane.columnIndex="1" />
+      <CheckBox fx:id="uniqueCheckBox" mnemonicParsing="false" mouseTransparent="true" text="unique" GridPane.columnIndex="2" />
+      <CheckBox fx:id="notNullCheckBox" mnemonicParsing="false" mouseTransparent="true" text="not null" GridPane.columnIndex="3" />
+   </children>
+</HBox>

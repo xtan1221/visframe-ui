@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<GridPane fx:id="rootContainerGridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.variable.input.recordwise.type.RecordAttributeInputVariableViewerController">
+   <children>
+      <Label text="alias name" />
+      <Label text="targetRecordMetadataID" GridPane.rowIndex="1" />
+      <TextField fx:id="aliasNameTextField" editable="false" GridPane.columnIndex="1" />
+      <Button fx:id="notesButton" mnemonicParsing="false" text="notes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <HBox fx:id="targetRecordMetadataIDViewerHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="attribute name (column name)" GridPane.rowIndex="2" />
+      <TextField fx:id="columnNameTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" />
+      <ColumnConstraints hgrow="SOMETIMES" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TitledPane fx:id="rootTiltledPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.generic.tree.trim.helper.SiblingReorderPatternBuilderEmbeddedUIContentController">
+   <content>
+      <AnchorPane>
+         <children>
+            <SplitPane dividerPositions="0.27043478260869563" prefHeight="878.0" prefWidth="1152.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <VBox fx:id="sideVBox">
+                     <children>
+                        <VBox prefHeight="447.0" prefWidth="318.0">
+                           <children>
+                              <HBox fx:id="searchNodeHBox">
+                                 <children>
+                                    <ChoiceBox fx:id="nodeFeatureChoiceBox" prefWidth="150.0" />
+                                    <TextField fx:id="featureContentTextField" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButtonOnAction" prefHeight="31.0" prefWidth="123.0" text="Search" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Button fx:id="clearSearchButton" mnemonicParsing="false" onAction="#clearSearchButtonOnAction" text="clear" />
+                                 </children>
+                              </HBox>
+                              <ListView fx:id="treeNodeListView" prefHeight="417.0" prefWidth="304.0" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="selectedParentNodesVBox" prefHeight="0.0" prefWidth="287.0" VBox.vgrow="NEVER">
+                           <children>
+                              <TitledPane prefHeight="200.0" prefWidth="200.0" text="selected node reorder pattern">
+                                 <content>
+                                    <VBox fx:id="nodeReorderVBox" />
+                                 </content>
+                              </TitledPane>
+                              <Button fx:id="clearSelectionButton" mnemonicParsing="false" onAction="#clearSelectionButtonOnAction" text="clear selection" />
+                           </children>
+                        </VBox>
+                        <Region prefHeight="218.0" prefWidth="311.0" VBox.vgrow="ALWAYS" />
+                        <HBox />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="mainVBox">
+                     <children>
+                        <VBox fx:id="operationVBox">
+                           <children>
+                              <HBox fx:id="treeZoomOperationHBox" alignment="CENTER_LEFT">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#xZoomInButtonOnAction" text="X Zoom in" fx:id="xZoomInButton" />
+                                    <Button mnemonicParsing="false" onAction="#xZoomOutButtonOnAction" text="X Zoom out" fx:id="xZoomOutButton" />
+                                    <Button fx:id="yZoomInButton" mnemonicParsing="false" onAction="#yZoomInButtonOnAction" text="Y Zoom in" />
+                                    <Button fx:id="yZoomOutButton" mnemonicParsing="false" onAction="#yZoomOutButtonOnAction" text="Y Zoom out" />
+                                    <Button fx:id="zoomInButton" mnemonicParsing="false" onAction="#zoomInButtonOnAction" text="Zoom in" />
+                                    <Button fx:id="zoomOutButton" mnemonicParsing="false" onAction="#zoomOutButtonOnAction" text="Zoom out" />
+                                    <Button fx:id="defaultSizeButton" mnemonicParsing="false" onAction="#defaultSizeButtonOnAction" text="Default Size" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="node circle size" />
+                                    <ChoiceBox fx:id="nodeCircleSizeChoiceBox" onDragDetected="#nodeCircleSizeChoiceBoxOnAction" prefHeight="31.0" prefWidth="127.0" />
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="displayOptionHBox" alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+                                 <children>
+                                    <CheckBox fx:id="showBootstrapCheckBox" mnemonicParsing="false" onAction="#showBootstrapCheckBoxOnAction" text="show BOOTSTRAP" />
+                                    <CheckBox fx:id="showEdgeLengthCheckBox" mnemonicParsing="false" onAction="#showEdgeLengthCheckBoxOnAction" text="show Edge length" />
+                                    <CheckBox fx:id="showNodeNonMandatoryAdditionalFeatureCheckBox" mnemonicParsing="false" onAction="#showNodeNonMandatoryAdditionalFeatureCheckBoxOnAction" text="show other node features" />
+                                    <CheckBox fx:id="showEdgeNonMandatoryAdditionalFeatureCheckBox" mnemonicParsing="false" onAction="#showEdgeNonMandatoryAdditionalFeatureCheckBoxOnAction" text="show other edge features" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <ScrollPane fx:id="interactiveTreeScrollPane" prefHeight="600.0" prefWidth="800.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

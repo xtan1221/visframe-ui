@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="rootContainerSplitPane" dividerPositions="0.15" orientation="VERTICAL" prefHeight="1000.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.run.layoutconfiguration.VisInstanceRunLayoutConfigurationBuilderEmbeddedUIContentController">
+  <items>
+      <VBox maxHeight="300.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="VisInstance UID" />
+                        <TextField fx:id="visInstanceUIDTextField" editable="false" />
+                        <Button fx:id="viewVisInstanceDetailButton" mnemonicParsing="false" onAction="#viewVisInstanceDetailButtonOnAction" text="view detail" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="VisInstanceRun UID" />
+                        <TextField fx:id="visInstanceRunUIDTextField" editable="false" />
+                        <Button fx:id="viewVisInstanceRunDetailButton" mnemonicParsing="false" onAction="#viewVisInstanceRunDetailButtonOnAction" text="view detail" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="VisInstanceRunLayoutConfiguration UID" />
+                        <TextField fx:id="visInstanceRunLayoutConfigurationUIDTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="Notes" />
+                        <TextArea fx:id="visInstanceRunLayoutConfigurationUIDTextFieldNotesTextArea" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <SplitPane dividerPositions="0.2">
+         <items>
+            <VBox maxWidth="350.0" minWidth="250.0" spacing="10.0" HBox.hgrow="NEVER">
+               <children>
+                  <Label text="Steps" />
+                  <VBox spacing="10.0">
+                     <children>
+                        <VBox fx:id="step1RootContainerVBox">
+                           <children>
+                              <Label text="step 1 preview and configuration" />
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="showStep1Button" mnemonicParsing="false" onAction="#showStep1ButtonOnAction" text="show" />
+                                    <Label fx:id="step1StatusLabel" text="unfinished" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="step2RootContainerVBox">
+                           <children>
+                              <Label text="step 2 layout on canvass (optional)" />
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="showStep2Button" mnemonicParsing="false" onAction="#showStep2ButtonOnAction" text="show" />
+                                    <Label fx:id="step2StatusLabel" text="unfinished" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="step3RootContainerVBox">
+                           <children>
+                              <Label text="step 3 save as image (optional)" />
+                              <HBox>
+                                 <children>
+                                    <Button fx:id="showStep3Button" mnemonicParsing="false" onAction="#showStep3ButtonOnAction" text="show" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <Label fx:id="finishableLabel" text="unfinishable" />
+               </children>
+            </VBox>
+            <ScrollPane fx:id="stepShowScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+  </items>
+</SplitPane>

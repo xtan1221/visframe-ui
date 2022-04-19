@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<HBox fx:id="rootContainerHBox" alignment="CENTER_LEFT" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.component.PiecewiseFunctionViewerController">
+   <children>
+      <StackPane>
+         <children>
+            <Circle fx:id="gotoPreviousCircle" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" text="previous" />
+         </children>
+      </StackPane>
+      <VBox fx:id="contentVBox">
+         <children>
+            <HBox alignment="CENTER_RIGHT" spacing="5.0" style="-fx-border-color: blue;">
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label text="default next function" />
+                     </children>
+                  </HBox>
+                  <StackPane>
+                     <children>
+                        <Circle fx:id="gotoDefaultNextCircle" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label alignment="CENTER" text="goto" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label text="Conditions" />
+                  <GridPane fx:id="conditionEvaluatorGridPane" style="-fx-background-color: cyan;">
+                     <children>
+                        <Label text="precedence index" />
+                        <Label text="basic infor" GridPane.columnIndex="1" />
+                        <Label text="detail infor" GridPane.columnIndex="2" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

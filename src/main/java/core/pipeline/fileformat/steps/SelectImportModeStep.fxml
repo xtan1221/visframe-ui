@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.fileformat.steps.SelectImportModeStepController">
+   <children>
+      <RadioButton fx:id="importFromExistingFileRadioButton" layoutX="126.0" layoutY="200.0" mnemonicParsing="false" text="import from existing file" />
+      <RadioButton fx:id="buildFromScratchRadioButton" layoutX="126.0" layoutY="230.0" mnemonicParsing="false" text="build from scratch" />
+   </children>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.nativevi.NativeVisInstanceBuilderEmbeddedUIContentController">
+   <children>
+      <SplitPane dividerPositions="0.2" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox spacing="5.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="VisInstance UID" />
+                        <TextField fx:id="visInstanceUIDTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="name" />
+                        <TextField fx:id="nameTextField" prefWidth="300.0" />
+                        <Label text="Notes" />
+                        <TextArea fx:id="notesTextArea" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox spacing="50.0">
+                     <children>
+                        <HBox fx:id="cfgSelectionControlHBox">
+                           <children>
+                              <Button fx:id="selectMoreCoreShapeCFGButton" mnemonicParsing="false" onAction="#selectMoreCoreShapeCFGButtonOnAction" text="select more" />
+                              <Button fx:id="clearAllSelectedCoreShapeCFGButton" mnemonicParsing="false" onAction="#clearAllSelectedCoreShapeCFGButtonOnAction" text="clear all" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button fx:id="viewCFDGraphButton" mnemonicParsing="false" onAction="#viewCFDGraphButtonOnAction" text="view CFD graph" />
+                              <CheckBox fx:id="sortByCFGNameCheckBox" mnemonicParsing="false" onAction="#sortByCFGNameCheckBoxOnAction" text="sort by name" />
+                              <CheckBox fx:id="sortByOwnerRecordDataNameCheckBox" mnemonicParsing="false" onAction="#sortByOwnerRecordDataNameCheckBoxOnAction" text="sort by owner record data name" />
+                              <Button fx:id="collapseAllButton" mnemonicParsing="false" onAction="#collapseAllButtonOnAction" text="collapse all" />
+                              <Button fx:id="expandAllButton" mnemonicParsing="false" onAction="#expandAllButtonOnAction" text="expand all" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="checkDuplicateVisInstanceButton" mnemonicParsing="false" onAction="#checkDuplicateVisInstanceButtonOnAction" text="check duplicate" underline="true" />
+                        <Label fx:id="finishableLabel" text="finishable" />
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToWidth="true" prefViewportHeight="538.0" prefViewportWidth="1178.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="selectedCoreShapeCFGContainerVBox" VBox.vgrow="ALWAYS" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

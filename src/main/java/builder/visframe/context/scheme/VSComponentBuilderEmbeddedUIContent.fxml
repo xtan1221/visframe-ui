@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.VSComponentBuilderEmbeddedUIContentController">
+   <children>
+      <HBox fx:id="mainOperationHBox" alignment="CENTER_LEFT">
+         <children>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonOnAction" text="✖" />
+            <Button fx:id="moveDownButton" mnemonicParsing="false" onAction="#moveDownButtonOnAction" text="⌄" />
+            <Button fx:id="moveUpButton" mnemonicParsing="false" onAction="#moveUpButtonOnAction" text="^" />
+            <Label text="precedence index:" />
+            <TextField fx:id="precedenceIndexTextField" editable="false" prefWidth="40.0" />
+            <Label text="#" />
+            <TextField fx:id="selectedCoreShapeCFGNumTextField" editable="false" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <TitledPane fx:id="selectedCoreShapeCFGSetTitledPane" text="core ShapeCFG set">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonOnAction" text="add" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonOnAction" text="clear" />
+                     </children>
+                  </HBox>
+                  <VBox fx:id="selectedCoreShapeCFGEntrySetContainerVBox" />
+                  <VBox>
+                     <children>
+                        <Label text="notes" />
+                        <TextArea fx:id="notesTextArea" prefHeight="80.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

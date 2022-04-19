@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<ScrollPane fx:id="rootContainerScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.graph.build.BuildGraphFromSingleExistingRecordOperationViewerController">
+   <content>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="name" />
+                        <TextField fx:id="nameTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="type" />
+                        <TextField fx:id="typeTextField" editable="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label text="notes" />
+                  <TextArea fx:id="notesTextArea" editable="false" prefHeight="79.0" prefWidth="600.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="owner record Metadata" />
+                  <HBox fx:id="ownerRecordMetadataIDViewerHBox" style="-fx-background-color: red;" />
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <Label text="shape type" />
+                  <TextField fx:id="shapeTypeNameTextField" editable="false" />
+                  <Button fx:id="viewShapeTypeDetailButton" mnemonicParsing="false" onAction="#viewShapeTypeDetailButtonOnAction" text="view detail" />
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label text="targets" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="300.0" prefViewportWidth="600.0">
+                     <content>
+                        <VBox fx:id="targetsViewerVBox" style="-fx-background-color: green;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="CompositionFunctions" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="index ID" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

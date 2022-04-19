@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="contentHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.basic.misc.SimpleTypeSelectorEmbeddedUIContentController">
+   <children>
+      <Label text="selected" />
+      <ComboBox fx:id="selectionComboBox" prefWidth="300.0" />
+   </children>
+</HBox>

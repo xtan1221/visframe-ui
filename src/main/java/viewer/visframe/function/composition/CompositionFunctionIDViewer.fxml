@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.composition.CompositionFunctionIDViewerController">
+   <children>
+      <Label text="CompositionFunctionGroupName" />
+      <TextField fx:id="cfgNameTextField" editable="false" prefWidth="200.0" />
+      <Label text="index" />
+      <TextField fx:id="cfIndexTextField" editable="false" prefWidth="100.0" />
+      <Button fx:id="viewCFDetailsButton" mnemonicParsing="false" onAction="#viewCFDetailsButtonOnAction" text="view detail" />
+   </children>
+</HBox>

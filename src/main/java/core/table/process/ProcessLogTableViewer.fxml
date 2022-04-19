@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.table.process.ProcessLogTableViewerController">
+   <children>
+      <Label text="Total records number" />
+      <HBox fx:id="tableViewContainerHBox" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <HBox>
+               <children>
+                  <CheckBox fx:id="rowSelectableCheckBox" mnemonicParsing="false" text="selectable" />
+                  <HBox fx:id="selectionRelatedButtonHBox">
+                     <children>
+                        <Button fx:id="rollbackSelectedProcessButton" mnemonicParsing="false" onAction="#rollbackSelectedProcessButtonOnAction" text="Rollback" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearButtonOnAction" text="Clear" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Region prefHeight="31.0" prefWidth="548.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshButtonOnAction" text="refresh" />
+            <Button fx:id="closeWindowButton" mnemonicParsing="false" onAction="#closeWindowButtonOnAction" text="Close" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

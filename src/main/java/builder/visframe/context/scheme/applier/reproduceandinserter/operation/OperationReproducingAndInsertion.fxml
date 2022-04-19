@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.applier.reproduceandinserter.operation.OperationReproducingAndInsertionController">
+   <children>
+      <SplitPane dividerPositions="0.7" HBox.hgrow="ALWAYS">
+         <items>
+            <VBox>
+               <children>
+                  <HBox fx:id="controlHBox">
+                     <children>
+                        <HBox>
+                           <children>
+                              <RadioButton fx:id="greedyRunModeRadioButton" mnemonicParsing="false" text="greedy-run" />
+                              <RadioButton fx:id="oneByOneRunModeRadioButton" mnemonicParsing="false" text="one-by-one" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="200.0" prefViewportWidth="1011.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <AnchorPane fx:id="trimmedIntegratedDOSGraphAnchorPane" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <SplitPane dividerPositions="0.2" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" VBox.vgrow="ALWAYS">
+              <items>
+                  <VBox>
+                     <children>
+                        <Label text="current reproduced operation" />
+                        <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="155.0" prefViewportWidth="295.0">
+                           <content>
+                              <VBox fx:id="currentReproducedOperationContainerVBox" fillWidth="false" style="-fx-background-color: yellow;" VBox.vgrow="ALWAYS" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="400.0" prefViewportHeight="646.0" prefViewportWidth="295.0">
+                     <content>
+                        <VBox VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="inserted reproduced operations" />
+                                    <Button fx:id="rollbackAllButton" mnemonicParsing="false" onAction="#rollbackAllButtonOnAction" text="roll back all" />
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="reproducedAndInsertedOperationContainerVBox" style="-fx-background-color: green;" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+              </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+</HBox>

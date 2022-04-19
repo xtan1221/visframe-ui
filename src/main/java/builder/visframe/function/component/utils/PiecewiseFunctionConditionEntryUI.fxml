@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" alignment="CENTER_LEFT" spacing="5.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.component.utils.PiecewiseFunctionConditionEntryUIController">
+   <children>
+      <HBox fx:id="operationHBox" alignment="CENTER">
+         <children>
+            <Button fx:id="moveDownButton" mnemonicParsing="false" onAction="#moveDownButtonOnAction" text="⌄" />
+            <Button fx:id="moveUpButton" mnemonicParsing="false" onAction="#moveUpButtonOnAction" text="^" />
+            <Button fx:id="deleteEntryButton" mnemonicParsing="false" onAction="#deleteEntryButtonOnAction" text="✖" />
+         </children>
+      </HBox>
+      <HBox fx:id="conditionHBox" alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="precedence" />
+                  <TextField fx:id="precedenceIndexTextField" editable="false" prefHeight="31.0" prefWidth="42.0" />
+               </children>
+            </HBox>
+            <Button fx:id="editConditionEvaluatorButton" mnemonicParsing="false" onAction="#editConditionEvaluatorButtonOnAction" text="edit" />
+            <Button fx:id="viewConditionEvaluatorButton" mnemonicParsing="false" onAction="#viewConditionEvaluatorButtonOnAction" text="view" />
+         </children>
+      </HBox>
+      <HBox fx:id="nextFunctionHBox" alignment="CENTER">
+         <children>
+            <Label text="next function" />
+            <Button fx:id="makeNextFunctionButton" mnemonicParsing="false" onAction="#makeNextFunctionButtonOnAction" text="+" />
+            <Button fx:id="deleteNextFunctionButton" mnemonicParsing="false" onAction="#deleteNextFunctionButtonOnAction" text="✖" />
+         </children>
+      </HBox>
+      <StackPane>
+         <children>
+            <Circle fx:id="gotoNextFunctionCircle" fill="DODGERBLUE" onMouseClicked="#gotoNextFunctionCircleOnMouseClicked" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label alignment="CENTER" text="goto" />
+         </children>
+      </StackPane>
+   </children>
+</HBox>

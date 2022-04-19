@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utils.exceptionhandler.ExceptionHandlerController">
+   <children>
+      <Label fx:id="titleLabel" text="title" />
+      <VBox VBox.vgrow="NEVER">
+         <children>
+            <Label text="Brief Message" />
+            <TextArea fx:id="briefMessageTextArea" editable="false" prefHeight="100.0" promptText="short mesaage" VBox.vgrow="NEVER" />
+         </children>
+      </VBox>
+      <TitledPane animated="false" text="See details" VBox.vgrow="NEVER">
+         <content>
+            <TextArea fx:id="detailsTextArea" editable="false" style="-fx-background-color: cyan;" />
+         </content>
+      </TitledPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

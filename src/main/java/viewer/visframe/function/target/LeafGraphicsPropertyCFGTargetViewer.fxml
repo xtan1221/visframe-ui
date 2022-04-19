@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" fillHeight="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.target.LeafGraphicsPropertyCFGTargetViewerController">
+   <children>
+      <TitledPane fx:id="detailInforTitledPane" expanded="false" HBox.hgrow="NEVER">
+         <content>
+            <GridPane>
+               <children>
+                  <Label text="name" />
+                  <TextField fx:id="nameTextField" editable="false" GridPane.columnIndex="1" />
+                  <Label text="notes" GridPane.rowIndex="2" />
+                  <TextArea fx:id="notesTextArea" editable="false" prefHeight="50.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="2" />
+                  <Label text="data type" GridPane.columnIndex="2" />
+                  <RadioButton fx:id="canBeNullRadioButton" mnemonicParsing="false" mouseTransparent="true" text="can be null" GridPane.rowIndex="1" />
+                  <TextField fx:id="defaultValueTextField" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="dataTypeTextField" editable="false" GridPane.columnIndex="3" />
+                  <RadioButton fx:id="hasDefaultValueRadioButton" mnemonicParsing="false" mouseTransparent="true" text="has default value" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="default value" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="viewGraphicsPropertyTreeButton" mnemonicParsing="false" onAction="#viewGraphicsPropertyTreeButtonOnAction" text="view graphics property tree" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </content>
+      </TitledPane>
+      <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+         <children>
+            <RadioButton fx:id="isMandatoryRadioButton" mnemonicParsing="false" mouseTransparent="true" text="mandatory" />
+         </children>
+      </VBox>
+   </children>
+</HBox>

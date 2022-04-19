@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.toolpanel.process.visinstance.run.layoutconfiguration.VisInstanceRunLayoutConfigurationToolPanelController">
+   <children>
+      <Label text="VisInstanceRunLayoutConfiguration" />
+      <Button fx:id="newButton" mnemonicParsing="false" onAction="#newButtonOnAction" text="New" />
+      <Button fx:id="viewAllButton" mnemonicParsing="false" onAction="#viewAllButtonOnAction" text="View All" />
+      <Button fx:id="exportImageButton" mnemonicParsing="false" onAction="#exportImageButtonOnAction" text="Export Image" />
+   </children>
+</VBox>

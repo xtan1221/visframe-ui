@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" prefHeight="1200.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.visscheme.appliedarchive.steps.BMakeVisSchemeAppliedArchiveStepController">
+   <children>
+      <ScrollPane fx:id="builderEmbeddedRootNodeContainerScrollPane" fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox fx:id="builderEmbeddedRootNodeVBox" />
+         </content></ScrollPane>
+   </children>
+</VBox>

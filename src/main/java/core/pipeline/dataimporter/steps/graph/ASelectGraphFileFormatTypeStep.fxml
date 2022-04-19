@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.dataimporter.steps.graph.ASelectGraphFileFormatTypeStepController">
+   <children>
+      <Label text="GraphDataFileFormatType" />
+      <ChoiceBox fx:id="graphDataFileFormatTypeChoiceBox" prefWidth="150.0" />
+   </children>
+</HBox>

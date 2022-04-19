@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TitledPane fx:id="rootContainerTitledPane" text="precedence index:" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vccl.copynumber.notesassignment.DAGNodeNotesAssignmentController">
+   <content>
+      <VBox fx:id="nodeCopyNotesAssignmentVBox" />
+   </content>
+</TitledPane>

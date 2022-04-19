@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.applier.reproduceandinserter.operation.utils.InsertedOperationController">
+   <children>
+      <Button fx:id="showOnGraphButton" mnemonicParsing="false" onAction="#showOnGraphButtonOnAction" text="show on graph" />
+      <Button fx:id="viewDetailsButton" mnemonicParsing="false" onAction="#viewDetailsButtonOnAction" text="view details" />
+      <Button fx:id="rollbackButton" mnemonicParsing="false" onAction="#rollbackButtonOnAction" text="rollback" />
+   </children>
+</HBox>

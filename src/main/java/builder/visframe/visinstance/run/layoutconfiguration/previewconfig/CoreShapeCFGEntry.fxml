@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.run.layoutconfiguration.previewconfig.CoreShapeCFGEntryController">
+   <children>
+      <HBox fx:id="controlHBox">
+         <children>
+            <CheckBox fx:id="toIncludeInLayoutCheckBox" mnemonicParsing="false" onAction="#toIncludeInLayoutCheckBoxOnAction" selected="true" text="included" />
+            <Button fx:id="moveUpButton" mnemonicParsing="false" onAction="#moveUpButtonOnAction" text="^" />
+            <Button fx:id="moveDownButton" mnemonicParsing="false" onAction="#moveDownButtonOnAction" text="⌄" />
+         </children>
+      </HBox>
+      <Button fx:id="viewCoreShapeCFGDetailButton" mnemonicParsing="false" onAction="#viewCoreShapeCFGDetailButtonOnAction" text="detail" />
+      <ColorPicker fx:id="coreShapeCFGColorPicker" />
+      <Label fx:id="coreShapeCFGIDLabel" text="ShapeCFGID" />
+   </children>
+</HBox>

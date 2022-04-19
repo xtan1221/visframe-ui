@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.toolpanel.process.operation.OperationToolPanelController">
+   <children>
+      <Label text="Operation" />
+      <Button fx:id="newOperationButton" mnemonicParsing="false" onAction="#newOperationButtonOnAction" text="New" />
+      <Button fx:id="viewAllButton" mnemonicParsing="false" onAction="#viewAllButtonOnAction" text="View All" />
+   </children>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.graph.vftree.feature.VfTreeNodeFeatureViewerController">
+   <children>
+      <VBox HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Vertex ID feature list (default by visframe)" />
+            <VBox fx:id="vertexIDFeatureVBox" />
+         </children>
+      </VBox>
+      <VBox HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Vertex additional feature list" />
+            <HBox>
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="mandatory (default by visframe)" />
+                        <VBox fx:id="mandatoryAdditionalFeatureVBox" />
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="non-mandatory (customized)" />
+                        <VBox fx:id="nonMandatoryAdditionalFeatureVBox" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.nonsqlbased.rng.SimpleRNGEvaluatorViewerController">
+   <children>
+      <Label text="range1InputVariable" />
+      <HBox fx:id="range1InputVariableViewerHBox" />
+      <Label text="range2InputVariable" />
+      <HBox fx:id="range2InputVariableViewerHBox" />
+      <Label text="outputVariable" />
+      <HBox fx:id="outputVariableViewerHBox" />
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" prefHeight="100.0" />
+   </children>
+</VBox>

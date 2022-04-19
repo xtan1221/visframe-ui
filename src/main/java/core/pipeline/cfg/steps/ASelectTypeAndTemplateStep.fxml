@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.cfg.steps.ASelectTypeAndTemplateStepController">
+   <children>
+      <VBox fx:id="typeSelectionVBox">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Selected Type" />
+                  <TextField fx:id="selectedCFGTypeTextField" editable="false" prefHeight="31.0" prefWidth="313.0" />
+                  <Button fx:id="clearTypeSelectionButton" mnemonicParsing="false" onAction="#clearTypeSelectionButtonOnAction" text="Clear" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <Label text="Template CompositionFunctionGroup name" />
+            <TextField fx:id="templateNameTextField" editable="false" />
+            <Button fx:id="chooseTemplateButton" mnemonicParsing="false" onAction="#chooseTemplateButtonOnAction" text="choose" />
+            <Button fx:id="clearTemplateSelectionButton" mnemonicParsing="false" onAction="#clearTemplateSelectionButtonOnAction" text="Clear" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

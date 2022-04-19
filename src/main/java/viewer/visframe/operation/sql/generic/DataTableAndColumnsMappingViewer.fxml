@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.sql.generic.DataTableAndColumnsMappingViewerController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="tableAliasName" />
+            <TextField fx:id="tableAliasNameTextField" editable="false" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <Label text="ownerRecordMetadataID" />
+      <HBox fx:id="ownerRecordMetadataIDViewerHBox" />
+      <GridPane fx:id="columnAliasNameDataTableColumnNameMapGridPane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="column alias" />
+            <Label text="column name" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

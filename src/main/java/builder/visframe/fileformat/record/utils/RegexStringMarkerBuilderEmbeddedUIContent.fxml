@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="contentVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.fileformat.record.utils.RegexStringMarkerBuilderEmbeddedUIContentController">
+   <children>
+      <HBox>
+         <children>
+            <TextField fx:id="stringValueTextField" />
+            <CheckBox fx:id="isCaseSensitiveCheckBox" mnemonicParsing="false" text="case sensitive" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

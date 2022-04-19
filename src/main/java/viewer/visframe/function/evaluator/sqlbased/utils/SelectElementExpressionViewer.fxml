@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox fx:id="rootContainerVBox" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.sqlbased.utils.SelectElementExpressionViewerController">
+   <children>
+      <Label text="SQL string" />
+      <TextField fx:id="sqlStringTextField" editable="false" />
+      <Label text="input variables" />
+      <GridPane fx:id="inputVariableGridPane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="name" />
+            <Label text="detail" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label text="output variable" />
+      <HBox fx:id="outputVariableViewerHBox" />
+   </children>
+</VBox>

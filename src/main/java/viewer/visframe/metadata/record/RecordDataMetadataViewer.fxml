@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.record.RecordDataMetadataViewerController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="name" />
+            <TextField fx:id="dataNameTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="notes" />
+            <TextArea fx:id="notesTextArea" editable="false" prefHeight="50.0" prefWidth="600.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <Label text="source" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <RadioButton fx:id="resultedFromOperationRadioButton" mnemonicParsing="false" mouseTransparent="true" text="Operation" GridPane.rowIndex="1" />
+                  <RadioButton fx:id="componentOfGraphDataRadioButton" mnemonicParsing="false" mouseTransparent="true" text="Structural component of Graph data" GridPane.rowIndex="2" />
+                  <RadioButton fx:id="importedRadioButton" mnemonicParsing="false" mouseTransparent="true" text="DataImporter" />
+                  <HBox fx:id="operationNameHBox" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="operationNameTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="graphDataNameHBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="graphDataNameTextField" editable="false" />
+                        <RadioButton fx:id="isGraphNodeRadioButton" mnemonicParsing="false" mouseTransparent="true" text="vertex" />
+                        <RadioButton fx:id="isGraphEdgeRadioButton" mnemonicParsing="false" mouseTransparent="true" text="edge" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="viewOperationDetailButton" mnemonicParsing="false" onAction="#viewOperationDetailButtonOnAction" text="view detail" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="viewGraphDataDetailButton" mnemonicParsing="false" onAction="#viewGraphDataDetailButtonOnAction" text="view detail" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="viewDataImporterDetailButton" mnemonicParsing="false" onAction="#viewDataImporterDetailButtonOnAction" text="view detail" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="Features/columns" />
+            <VBox fx:id="columnViewerVBox" />
+            <HBox>
+               <children>
+                  <Button fx:id="viewDataTableContentButton" mnemonicParsing="false" onAction="#viewDataTableContentButtonOnAction" text="view data table content" />
+                  <Label fx:id="visSchemeBasedInforLabel" style="-fx-text-fill: red;" text="not applicable for VisScheme based Record data">
+                     <font>
+                        <Font name="System Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

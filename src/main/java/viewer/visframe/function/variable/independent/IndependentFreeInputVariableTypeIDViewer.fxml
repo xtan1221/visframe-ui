@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" alignment="CENTER_LEFT" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.variable.independent.IndependentFreeInputVariableTypeIDViewerController">
+   <children>
+      <GridPane gridLinesVisible="true">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="owner CompositionFunction" GridPane.rowIndex="1" />
+            <Label text="alias name" />
+            <TextField fx:id="aliasNameTextField" editable="false" GridPane.columnIndex="1" />
+            <HBox fx:id="ownerCFIDHBox" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="viewIndieFIVDetailButton" mnemonicParsing="false" onAction="#viewIndieFIVDetailButtonOnAction" text="view detail" />
+   </children>
+</HBox>

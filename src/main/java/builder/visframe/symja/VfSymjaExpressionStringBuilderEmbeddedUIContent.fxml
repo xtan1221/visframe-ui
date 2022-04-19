@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="containerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.symja.VfSymjaExpressionStringBuilderEmbeddedUIContentController">
+   <children>
+      <HBox fx:id="expressionHBox">
+         <children>
+            <Label text="expression string(SYMJA syntax)" />
+            <TextField fx:id="expressionTextField" prefHeight="31.0" prefWidth="299.0" />
+         </children>
+      </HBox>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="# detected variable" />
+                  <TextField fx:id="detectedVariableNumTextField" editable="false" />
+               </children>
+            </HBox>
+            <HBox fx:id="detectedVariableNameTextFieldHBox" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

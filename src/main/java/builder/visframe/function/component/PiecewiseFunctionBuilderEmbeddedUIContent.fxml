@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.component.PiecewiseFunctionBuilderEmbeddedUIContentController">
+   <children>
+      <VBox fx:id="mainVBox">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button fx:id="deleteThisPiecewiseFunctionButton" mnemonicParsing="false" onAction="#deleteThisPiecewiseFunctionButtonOnAction" text="✖" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle fx:id="gotoPreviousCircle" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label alignment="CENTER" text="previous" />
+                     </children>
+                  </StackPane>
+                  <HBox fx:id="mainContentHBox">
+                     <children>
+                        <VBox fx:id="contentVBox">
+                           <children>
+                              <HBox alignment="CENTER_RIGHT" spacing="5.0" style="-fx-border-color: blue;">
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <Label text="default next function" />
+                                                <Button fx:id="makeDefaultNextFunctionButton" mnemonicParsing="false" onAction="#makeDefaultNextFunctionButtonOnAction" text="+" />
+                                                <Button fx:id="deleteDefaultNextFunctionButton" mnemonicParsing="false" onAction="#deleteDefaultNextFunctionButtonOnAction" text="✖" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <Circle fx:id="gotoDefaultNextCircle" fill="DODGERBLUE" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+                                          <Label alignment="CENTER" text="goto" />
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </HBox>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Conditions" />
+                                          <Button fx:id="addConditionEntryButton" mnemonicParsing="false" onAction="#addConditionEntryButtonOnAction" text="+" />
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="conditionEntryVBox" spacing="10.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TitledPane fx:id="inforTitledPane" animated="false" expanded="false" text="summary" VBox.vgrow="ALWAYS">
+         <content>
+            <AnchorPane />
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

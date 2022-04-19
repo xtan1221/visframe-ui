@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.component.SimpleFunctionBuilderEmbeddedUIContentController">
+   <children>
+      <VBox fx:id="mainVBox">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button fx:id="deleteThisSimpleFunctionButton" mnemonicParsing="false" onAction="#deleteThisSimpleFunctionButtonOnAction" text="✖" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="5.0" style="-fx-border-color: blue;">
+               <children>
+                  <StackPane>
+                     <children>
+                        <Circle fx:id="goToPreviousFunctionCircle" fill="DODGERBLUE" onMouseClicked="#goToPreviousCircleOnMouseClicked" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="previous" />
+                     </children>
+                  </StackPane>
+                  <VBox alignment="CENTER_LEFT">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label text="Evaluators" />
+                              <Button fx:id="addEvaluatorButton" mnemonicParsing="false" onAction="#addEvaluatorButtonOnAction" text="+" />
+                           </children>
+                        </HBox>
+                        <VBox fx:id="evaluatorListVBox" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label text="next" />
+                        <Button fx:id="makeNextFunctionButton" mnemonicParsing="false" onAction="#makeNextFunctionButtonOnAction" text="+" />
+                        <Button fx:id="deleteNextFunctionButton" mnemonicParsing="false" onAction="#deleteNextFunctionButtonOnAction" text="✖" />
+                     </children>
+                  </HBox>
+                  <StackPane>
+                     <children>
+                        <Circle fx:id="goToNextFunctionCircle" fill="DODGERBLUE" onMouseClicked="#goToNextFunctionCircleOnMouseClicked" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Label text="next" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TitledPane fx:id="inforTitledPane" animated="false" text="summary" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox>
+               <children>
+                  <Label text="Targets" />
+                  <Label text="# assigned by this" />
+                  <TextField fx:id="targetNumAssignedByThisCFTextField" editable="false" />
+                  <Label text="# assigned by upstream simple functions" />
+                  <TextField editable="false" />
+                  <Label text="# unassigned ones" />
+                  <TextField fx:id="targetNumUnAssignedTextField" editable="false" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.fileformat.steps.importing.ImportFromFileStepController">
+   <children>
+      <HBox>
+         <children>
+            <Label layoutX="52.0" layoutY="97.0" prefHeight="35.0" prefWidth="80.0" text="Location:" />
+            <TextField fx:id="fileFormatFileLocationTextField" editable="false" layoutX="132.0" layoutY="99.0" prefHeight="31.0" prefWidth="203.0" />
+            <Button fx:id="browseButton" layoutX="346.0" layoutY="99.0" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse..." />
+            <Button mnemonicParsing="false" text="deserialize" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="FileFormat type" />
+            <TextField fx:id="fileFormatTypeTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="FileFormat original name" />
+            <TextField fx:id="fileFormatOriginalNameTextField" editable="false" />
+            <Label text="imported name" />
+            <TextField fx:id="fileFormatImportedNameTextField" />
+            <HBox>
+               <children>
+                  <Button fx:id="checkFileFormatIDExistenceButton" mnemonicParsing="false" onAction="#checkFileFormatIDExistenceButtonOnAction" text="check" />
+                  <Label fx:id="fileFormatIDAlreadyExistLabel" text="passed" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

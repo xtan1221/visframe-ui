@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.visinstance.run.layoutconfiguration.previewconfig.VisInstanceRunLayoutPreviewAndConfigController">
+   <children>
+      <HBox fx:id="controlButtonHBox">
+         <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="cancel" />
+            <Button fx:id="finishButton" mnemonicParsing="false" onAction="#finishButtonOnAction" text="finish" />
+         </children>
+      </HBox>
+      <SplitPane dividerPositions="0.8" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox>
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="801.0" prefViewportWidth="1001.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <AnchorPane style="-fx-background-color: yellow;">
+                           <children>
+                              <AnchorPane fx:id="canvassAnchorPane" layoutX="100.0" layoutY="100.0" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;" />
+                              <Label fx:id="heightLabel" layoutX="900.0" layoutY="400.0" text="height">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane layoutX="100.0" maxHeight="95.0" maxWidth="800.0" minHeight="95.0" minWidth="800.0" prefHeight="95.0" prefWidth="800.0" style="-fx-background-color: cyan;" fx:id="xAxisDensityHistogramAnchorPane" />
+                              <Label fx:id="widthLabel" layoutX="450.0" layoutY="700.0" text="width">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="yAxisDensityHistogramAnchorPane" layoutY="100.0" maxHeight="600.0" maxWidth="95.0" minHeight="600.0" minWidth="95.0" prefHeight="600.0" prefWidth="95.0" style="-fx-background-color: cyan;" />
+                              <Line endX="100.0" endY="800.0" startX="100.0" startY="100.0" style="-fx-stroke-dash-array: 10;" />
+                              <Line endX="100.0" endY="800.0" startX="80.0" startY="780.0" />
+                              <Line endX="100.0" endY="800.0" startX="120.0" startY="780.0" />
+                              <Line endX="1000.0" endY="100.0" startX="100.0" startY="100.0" style="-fx-stroke-dash-array: 10;" />
+                              <Line endX="1000.0" endY="100.0" startX="980.0" startY="80.0" />
+                              <Line endX="1000.0" endY="100.0" startX="980.0" startY="120.0" />
+                              <Label layoutX="900.0" layoutY="50.0" text="X axis">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="20.0" layoutY="750.0" text="Y axis">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox maxWidth="500.0" minWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="full estimated layout region" />
+                        <Label text="start coordinate" />
+                        <HBox>
+                           <children>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="x" />
+                                    <TextField fx:id="fullRegionStartXTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="y" />
+                                    <TextField fx:id="fullRegionStartYTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label text="end coordinate" />
+                        <HBox>
+                           <children>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="x" />
+                                    <TextField fx:id="fullRegionEndXTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="y" />
+                                    <TextField fx:id="fullRegionEndYTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Line endX="100.0" startX="-100.0" />
+                  <VBox>
+                     <children>
+                        <Label text="Core ShapeCFG layout order" />
+                        <ScrollPane fitToWidth="true" prefViewportWidth="200.0">
+                           <content>
+                              <VBox fx:id="coreShapeCFGListVBox" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+                  <Line endX="100.0" startX="-100.0" />
+                  <VBox>
+                     <children>
+                        <Label text="selected layout region" />
+                        <CheckBox fx:id="selectFullPreviewRegionCheckBox" mnemonicParsing="false" text="full preview region" />
+                        <Label text="sub-region" />
+                        <Label text="start coordinate" />
+                        <HBox>
+                           <children>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="x" />
+                                    <TextField fx:id="selectedRegionStartXTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="y" />
+                                    <TextField fx:id="selectedRegionStartYTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <Label text="end coordinate" />
+                        <HBox>
+                           <children>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="x" />
+                                    <TextField fx:id="selectedRegionEndXTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="y" />
+                                    <TextField fx:id="selectedRegionEndYTextField" editable="false" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button fx:id="clearSelectedRegionButton" mnemonicParsing="false" onAction="#clearSelectedRegionButtonOnAction" text="clear" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>

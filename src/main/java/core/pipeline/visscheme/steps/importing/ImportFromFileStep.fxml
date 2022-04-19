@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.visscheme.steps.importing.ImportFromFileStepController">
+   <children>
+      <HBox>
+         <children>
+            <Label layoutX="52.0" layoutY="97.0" prefHeight="35.0" prefWidth="80.0" text="Location:" />
+            <TextField fx:id="importedFileLocationTextField" editable="false" layoutX="132.0" layoutY="99.0" prefHeight="31.0" prefWidth="203.0" />
+            <Button fx:id="browseButton" layoutX="346.0" layoutY="99.0" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse..." />
+            <Button mnemonicParsing="false" text="deserialize" />
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label text="VisScheme original name" />
+            <TextField fx:id="originalNameTextField" editable="false" />
+            <Label text="imported name" />
+            <TextField fx:id="importedNameTextField" />
+            <HBox />
+         </children>
+      </HBox>
+      <Label text="Note that VisScheme name is not used as unique identifier in the VisProjectDBContext.">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

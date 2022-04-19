@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vccl.copynumber.notesassignment.DAGNodeCopyNotesAssignmentController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="copy index:" />
+            <TextField fx:id="copyIndexTextField" editable="false" prefWidth="50.0" />
+         </children>
+      </HBox>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="100.0" prefViewportHeight="200.0" prefViewportWidth="198.0">
+         <content>
+            <TextArea fx:id="nodeCopyNotesTextArea" />
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

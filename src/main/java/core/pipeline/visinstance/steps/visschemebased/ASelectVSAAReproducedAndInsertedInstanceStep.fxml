@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.pipeline.visinstance.steps.visschemebased.ASelectVSAAReproducedAndInsertedInstanceStepController">
+   <children>
+      <VBox fx:id="selectedItemVBox">
+         <children>
+            <HBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="VisScheme UID" />
+                        <TextField fx:id="appliedVisSchemeUIDTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="name" />
+                        <TextField fx:id="appliedVisSchemeNameTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="viewAppliedVisSchemeDetailButton" mnemonicParsing="false" onAction="#viewAppliedVisSchemeDetailButtonOnAction" text="view detail" />
+                  <Region prefHeight="31.0" prefWidth="182.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="VisSchemeAppliedArchive UID" />
+                  <TextField fx:id="visSchemeAppliedArchiveUIDTextField" editable="false" />
+                  <Button fx:id="viewVisSchemeAppliedArchiveDetailButton" mnemonicParsing="false" onAction="#viewVisSchemeAppliedArchiveDetailButtonOnAction" text="view detail" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="VisSchemeAppliedArchiveReproducedAndInsertedInstance  UID" />
+                  <TextField fx:id="visSchemeAppliedArchiveReproducedAndInsertedInstanceUIDTextField" editable="false" />
+                  <Button fx:id="viewVisSchemeAppliedArchiveReproducedAndInsertedInstanceDetailButton" mnemonicParsing="false" onAction="#viewVisSchemeAppliedArchiveReproducedAndInsertedInstanceDetailButtonOnAction" text="view detail" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="browseButton" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse..." />
+         </children>
+      </HBox>
+   </children>
+</VBox>

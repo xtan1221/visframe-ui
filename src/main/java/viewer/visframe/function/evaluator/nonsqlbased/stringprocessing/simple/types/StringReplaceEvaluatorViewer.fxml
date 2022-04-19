@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.nonsqlbased.stringprocessing.simple.types.StringReplaceEvaluatorViewerController">
+   <children>
+      <Label text="targetInputVariable" />
+      <VBox fx:id="targetInputVariableViewerVBox" />
+      <Label text="targetSubstringInputVariable" />
+      <HBox fx:id="targetSubstringInputVariableViewerHBox" />
+      <Label text="replacingStringInputVariable" />
+      <HBox fx:id="replacingStringInputVariableViewerHBox" />
+      <Label text="toReplaceAllInputVariable" />
+      <HBox fx:id="toReplaceAllInputVariableViewerHBox" />
+      <CheckBox fx:id="toReplaceAllByDefaultCheckBox" mnemonicParsing="false" mouseTransparent="true" text="toReplaceAllByDefault" />
+      <Label text="outputVariable" />
+      <HBox fx:id="outputVariableViewerHBox" />
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+   </children>
+</VBox>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.toolpanel.process.dataimporter.DataImporterToolPanelController">
+   <children>
+      <Label text="Data Importer" />
+      <Button fx:id="newDataImporterButton" mnemonicParsing="false" onAction="#newDataImporterButtonOnAction" text="New" />
+      <Button fx:id="viewAllButton" mnemonicParsing="false" onAction="#viewAllButtonOnAction" text="View All" />
+   </children>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.sql.predefined.utils.VfSymjaSinglePrimitiveOutputExpressionViewerController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="output expression sqlDataType" />
+            <TextField fx:id="outputExpressionSqlDataTypeTextField" editable="false" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <Label text="expressionString" />
+      <TextField fx:id="expressionStringTextField" editable="false" />
+      <Label text="variableNameSQLDataTypeMap" />
+      <GridPane fx:id="variableNameSQLDataTypeMapGridPane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="variable name" GridPane.rowIndex="1" />
+            <Label text="sql data type" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

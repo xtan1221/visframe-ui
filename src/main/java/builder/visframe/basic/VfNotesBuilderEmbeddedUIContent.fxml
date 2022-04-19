@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.basic.VfNotesBuilderEmbeddedUIContentController">
+   <children>
+      <TextArea fx:id="noteStringTextArea" prefHeight="80.0" />
+      <HBox>
+         <children>
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonOnAction" style="-fx-background-color: red;" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

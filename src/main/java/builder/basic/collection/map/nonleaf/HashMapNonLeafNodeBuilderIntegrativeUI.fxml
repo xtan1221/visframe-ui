@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="containerVBox" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.basic.collection.map.nonleaf.HashMapNonLeafNodeBuilderIntegrativeUIController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="nodeNameLabel" />
+            <Label text="nodeDescriptionLabel" />
+         </children>
+      </HBox>
+      <VBox fx:id="contentVBox" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox fx:id="mapOperationButtonHBox">
+               <children>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonOnAction" text="Add" />
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonOnAction" text="Delete" />
+                  <Button fx:id="selectAllButton" mnemonicParsing="false" onAction="#selectAllButtonOnAction" text="Select All" />
+                  <Button fx:id="deSelectAllButton" mnemonicParsing="false" onAction="#deSelectAllButtonOnAction" text="De-Select All" />
+                  <Button fx:id="checkButton" mnemonicParsing="false" onAction="#checkButtonOnAction" text="Check" />
+               </children>
+            </HBox>
+            <ScrollPane fx:id="entryScrollPane" prefViewportHeight="235.0" prefViewportWidth="541.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="entryVBox" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <HBox fx:id="operationButtonContainerHBox">
+         <children>
+            <Button fx:id="finishButton" mnemonicParsing="false" onAction="#finishButtonOnAction" text="Finish" />
+            <Button fx:id="setToDefaultEmptyButton" mnemonicParsing="false" onAction="#setToDefaultEmptyButtonOnAction" text="set To Default emtpy" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.function.component.SimpleFunctionBuilderEmbeddedUIContentController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="name" />
+            <TextField fx:id="nameTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox GridPane.columnIndex="4">
+         <children>
+            <Label text="data type" />
+            <TextField fx:id="dataTypeTextField" editable="false" />
+         </children>
+      </HBox>
+      <CheckBox fx:id="inPrimaryKeyCheckBox" mnemonicParsing="false" text="in Primary key" GridPane.columnIndex="1" />
+      <CheckBox fx:id="uniqueCheckBox" mnemonicParsing="false" text="unique" GridPane.columnIndex="2" />
+      <CheckBox fx:id="notNullCheckBox" mnemonicParsing="false" text="not null" GridPane.columnIndex="3" />
+   </children>
+</HBox>

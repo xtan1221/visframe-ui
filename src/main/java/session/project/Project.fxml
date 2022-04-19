@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<TabPane fx:id="rootContainerTabPane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.project.ProjectController">
+  <tabs>
+    <Tab fx:id="processLogTableTab" text="Process log table">
+      <content>
+            <VBox fx:id="processLogTableVBox" />
+      </content>
+    </Tab>
+    <Tab fx:id="CFDGraphTab" text="CFD graph">
+         <content>
+            <VBox fx:id="CFDGraphVBox" />
+         </content>
+    </Tab>
+      <Tab fx:id="DOSGraphTab" text="DOS graph">
+         <content>
+            <VBox fx:id="DOSGraphVBox" />
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="tableViwerRootContainerVBox" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="core.table.hasIDTypeRelationalTableSchema.HasIDTypeRelationalTableContentViewerController">
+   <children>
+      <HBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Total row #" />
+                  <TextField fx:id="totalRecordNumTextField" editable="false" prefWidth="100.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <HBox fx:id="alternativeRowRangeSelectionHBox">
+                     <children>
+                        <Label text="row range start" />
+                        <TextField fx:id="startRecordIndexTextField" prefWidth="100.0" />
+                        <Label text="end" />
+                        <TextField fx:id="endRecordIndexTextField" prefWidth="100.0" />
+                        <Button fx:id="runSelectedRowRangeButton" mnemonicParsing="false" onAction="#runSelectedRowRangeButtonOnAction" text="run" />
+                     </children>
+                  </HBox>
+                  <CheckBox fx:id="includeAllRecordCheckBox" mnemonicParsing="false" text="all" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label text="page row limit" />
+                  <ChoiceBox fx:id="pageRecordNumLimitChoiceBox" prefWidth="100.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="current page #" />
+                        <TextField fx:id="currentPageNumTextField" editable="false" prefWidth="100.0" />
+                        <Label text="of" />
+                        <TextField fx:id="totalPageNumTextField" editable="false" prefWidth="100.0" />
+                        <Button fx:id="previousPageButton" mnemonicParsing="false" onAction="#previousPageButtonOnAction" text="&lt;" />
+                        <Button fx:id="nextPageButton" mnemonicParsing="false" onAction="#nextPageButtonOnAction" text="&gt;" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="go to" />
+                        <TextField fx:id="goToPageIndexTextField" prefWidth="100.0" />
+                        <Button fx:id="goToPageButton" mnemonicParsing="false" onAction="#goToPageButtonOnAction" text="run" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="select" />
+                        <ChoiceBox fx:id="pageIndexChoiceBox" prefWidth="100.0" />
+                        <Label fx:id="pageIndexChoiceBoxDisabledInforLabel" style="-fx-text-fill: red;" text="(disabled when page # &gt;100)" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="NEVER">
+         <children>
+            <Accordion fx:id="colSorterAccordion">
+              <panes>
+                <TitledPane animated="false" expanded="false" text="order by">
+                     <content>
+                        <VBox fx:id="orderByColumnVBox" alignment="CENTER" prefHeight="24.0" prefWidth="98.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Button fx:id="rowOrderByButton" mnemonicParsing="false" onAction="#rowOrderByButtonOnAction" text="run" />
+            <Button fx:id="resetOrderByButton" mnemonicParsing="false" onAction="#resetOrderByButtonOnAction" text="reset" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="exportButton" mnemonicParsing="false" onAction="#exportButtonOnAction" text="export to file" />
+         </children>
+      </HBox>
+      <HBox fx:id="tableViewContainerHBox" alignment="CENTER" style="-fx-background-color: green;" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

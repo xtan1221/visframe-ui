@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.basic.collection.list.element.ListFeatureElementController">
+   <children>
+      <HBox fx:id="elementOperationHBox">
+         <children>
+            <CheckBox fx:id="elementCheckBox" mnemonicParsing="false" />
+            <HBox fx:id="operationButtonHBox">
+               <children>
+                  <Button fx:id="moveDownButton" mnemonicParsing="false" onAction="#moveDownButtonOnAction" text="⌄" />
+                  <Button fx:id="moveUpButton" mnemonicParsing="false" onAction="#moveUpButtonOnAction" text="^" />
+                  <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeButtonOnAction" text="✖" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Label fx:id="indexLabel" text="index" />
+      <HBox fx:id="elementHBox" />
+   </children>
+</HBox>

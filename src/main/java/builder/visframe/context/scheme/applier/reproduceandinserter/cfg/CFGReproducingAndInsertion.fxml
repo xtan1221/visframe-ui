@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.applier.reproduceandinserter.cfg.CFGReproducingAndInsertinoController">
+   <children>
+      <SplitPane dividerPositions="0.75" HBox.hgrow="ALWAYS">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="200.0" prefViewportWidth="1011.0" VBox.vgrow="ALWAYS">
+               <content>
+                  <AnchorPane fx:id="trimmedIntegratedCFDGraphAnchorPane" />
+               </content>
+            </ScrollPane>
+            <VBox>
+               <children>
+                  <Label text="inserted CFGs" />
+                  <HBox fx:id="controlHBox">
+                     <children>
+                        <Button fx:id="startButton" mnemonicParsing="false" onAction="#startButtonOnAction" text="start" />
+                        <Button fx:id="rollbackAllButton" mnemonicParsing="false" onAction="#rollbackAllButtonOnAction" text="roll back all" />
+                     </children>
+                  </HBox>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="reproducedAndInsertedCFGContainerHBox" style="-fx-background-color: yellow;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</HBox>

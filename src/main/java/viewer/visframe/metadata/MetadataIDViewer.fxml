@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<HBox fx:id="rootContainerHBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.metadata.MetadataIDViewerController">
+   <children>
+      <Label text="name" />
+      <TextField fx:id="nameTextField" editable="false" prefWidth="200.0" />
+      <Label text="type" />
+      <TextField fx:id="typeTextField" editable="false" prefWidth="200.0" />
+      <Button fx:id="viewDetailsButton" mnemonicParsing="false" onAction="#viewDetailsButtonOnAction" text="view detail" />
+   </children>
+</HBox>

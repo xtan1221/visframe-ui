@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane fx:id="nodeRootStackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dependencygraph.vcd.VCDNodeController">
+   <children>
+      <Circle fill="DODGERBLUE" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <VBox alignment="CENTER">
+         <children>
+            <Label fx:id="precedenceIndexLabel" text="precedence index" />
+            <Button fx:id="viewAssignedEntitiesButton" mnemonicParsing="false" onAction="#viewAssignedEntitiesButtonOnAction" text="view assigned entities" />
+            <Button fx:id="viewCFDGraphButton" mnemonicParsing="false" onAction="#viewCFDGraphButtonOnAction" text="view CFD graph" />
+            <Button fx:id="viewDOSGraphButton" mnemonicParsing="false" onAction="#viewDOSGraphButtonOnAction" text="view DOS graph" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

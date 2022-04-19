@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.function.evaluator.nonsqlbased.SymjaExpressionEvaluatorViewerController">
+   <children>
+      <Label text="symja expression" />
+      <HBox>
+         <children>
+            <Label text="string" />
+            <TextField fx:id="symjaExpressionStringTextField" editable="false" HBox.hgrow="ALWAYS" />
+            <Label text="data type" />
+            <TextField fx:id="dataTypeTextField" />
+         </children></HBox>
+      <GridPane fx:id="symjaVariableNameInputVariableMapGridPane">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="syma variable name" />
+            <Label text="input variable" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Label text="output variable" />
+      <HBox fx:id="outputVariableViewerHBox" />
+      <Label text="notes" />
+      <TextArea fx:id="notesTextArea" editable="false" prefHeight="100.0" />
+   </children>
+</VBox>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="session.serialization.visscheme.ExportVisSchemeController">
+   <children>
+      <VBox>
+         <children>
+            <HBox>
+               <children>
+                  <Label layoutX="14.0" layoutY="130.0" text="Selected VisScheme name" />
+                  <TextField fx:id="selectedVisSchemeNameTextField" editable="false" layoutX="151.0" layoutY="125.0" />
+                  <Label text="Selected VisScheme UID" />
+                  <TextField fx:id="selectedVisSchemeUIDTextField" editable="false" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="browseVisSchemeButton" layoutX="356.0" layoutY="125.0" mnemonicParsing="false" onAction="#browseVisSchemeButtonOnAction" text="Browse..." />
+                  <Button fx:id="viewSelectedVisSchemeDetailButton" layoutX="469.0" layoutY="125.0" mnemonicParsing="false" onAction="#viewSelectedVisSchemeDetailButtonOnAction" text="View details" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Export location:" />
+                  <TextField fx:id="exportLocationTextField" editable="false" prefHeight="31.0" prefWidth="278.0" />
+                  <Button fx:id="browseExportLocationButton" mnemonicParsing="false" onAction="#browseExportLocationButtonOnAction" text="Browse..." />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="exportButton" mnemonicParsing="false" onAction="#exportButtonOnAction" text="Export" />
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonOnAction" text="Cancel" />
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonOnAction" text="Reset" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

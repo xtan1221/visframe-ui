@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="contentVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.metadata.MetadataIDSelectorEmbeddedUIContentController">
+   <children>
+      <HBox>
+         <children>
+            <Label text="Data Type:" />
+            <TextField fx:id="dataTypeTextField" editable="false" />
+            <Label text="Data Name" />
+            <TextField fx:id="metadataNameTextField" editable="false" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="chooseMetadataButton" mnemonicParsing="false" onAction="#chooseFileFormatButtonOnAction" text="choose" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

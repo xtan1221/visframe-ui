@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="builder.visframe.context.scheme.applier.reproduceandinserter.VisSchemeAppliedArchiveReproducedAndInsertedInstanceBuilderEmbeddedUIContentController">
+   <children>
+      <SplitPane dividerPositions="0.2" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+         <items>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="applied VisScheme UID" />
+                              <TextField fx:id="appliedVisSchemeUIDTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Label text="name" />
+                              <TextField fx:id="appliedVisSchemeNameTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="viewAppliedVisSchemeDetailButton" mnemonicParsing="false" onAction="#viewAppliedVisSchemeDetailButtonOnAction" text="view detail" />
+                        <Region prefHeight="31.0" prefWidth="182.0" />
+                        <Button fx:id="debugButton" mnemonicParsing="false" onAction="#debugButtonOnAction" text="view process log table" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="VisSchemeAppliedArchive UID" />
+                        <TextField fx:id="visSchemeAppliedArchiveUIDTextField" editable="false" />
+                        <Button fx:id="viewVisSchemeAppliedArchiveDetailButton" mnemonicParsing="false" onAction="#viewVisSchemeAppliedArchiveDetailButtonOnAction" text="view detail" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label text="VisSchemeAppliedArchiveReproducedAndInsertedInstance  UID" />
+                        <TextField fx:id="visSchemeAppliedArchiveReproducedAndInsertedInstanceUIDTextField" editable="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="66.0" prefWidth="1180.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="107.0" text="Notes" />
+                        <TextArea fx:id="notesTextArea" prefHeight="90.0" prefWidth="744.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <SplitPane dividerPositions="0.23">
+               <items>
+                  <VBox spacing="10.0" HBox.hgrow="NEVER">
+                     <children>
+                        <Label text="Steps" />
+                        <VBox spacing="10.0">
+                           <children>
+                              <VBox fx:id="step1RootContainerVBox">
+                                 <children>
+                                    <Label text="step 1 reproduce and insert Operation" />
+                                    <HBox>
+                                       <children>
+                                          <Button fx:id="showStep1Button" mnemonicParsing="false" onAction="#showStep1ButtonOnAction" text="show" />
+                                          <Label fx:id="step1StatusLabel" text="unfinished" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="step2RootContainerVBox">
+                                 <children>
+                                    <Label text="step 2 reproduce and insert CFGs" />
+                                    <HBox>
+                                       <children>
+                                          <Button fx:id="showStep2Button" mnemonicParsing="false" onAction="#showStep2ButtonOnAction" text="show" />
+                                          <Label fx:id="step2StatusLabel" text="unfinished" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="step3RootContainerVBox">
+                                 <children>
+                                    <Label text="step 3 reproduce and insert CFs" />
+                                    <HBox>
+                                       <children>
+                                          <Button fx:id="showStep3Button" mnemonicParsing="false" onAction="#showStep3ButtonOnAction" text="show" />
+                                          <Label fx:id="step3StatusLabel" text="unfinished" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <Label fx:id="finishableLabel" text="unfinishable" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <ScrollPane fx:id="stepShowScrollPane" fitToHeight="true" fitToWidth="true" prefViewportHeight="662.0" prefViewportWidth="879.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox fx:id="rootContainerVBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewer.visframe.operation.sql.generic.GenericSQLQueryViewerController">
+   <children>
+      <Label text="aliasedSQLQueryString" />
+      <TextArea fx:id="aliasedSQLQueryStringTextArea" editable="false" prefHeight="100.0" />
+      <Label text="tableAliasNameMappingMap" />
+      <VBox fx:id="tableAliasNameMappingsViewerVBox" />
+      <Label text="orderedListOfColumnInOutputDataTable" />
+      <VBox fx:id="orderedListOfColumnInOutputDataTableViewersVBox" />
+   </children>
+</VBox>
